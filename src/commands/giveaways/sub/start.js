@@ -28,7 +28,7 @@ module.exports = async (member, giveawayChannel, duration, prize, winners, host,
       prize,
       winnerCount: winners,
       hostedBy: host,
-      thumbnail: "https://i.imgur.com/a/33foisj",
+      thumbnail: "https://cdn-icons-png.flaticon.com/512/864/864763.png",
       messages: {
         giveaway: "🎉 **GIVEAWAY** 🎉",
         giveawayEnded: "🎉 **GIVEAWAY ENDED** 🎉",

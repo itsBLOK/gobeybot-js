@@ -26,9 +26,6 @@ module.exports = async (client, member) => {
     if (!client.counterUpdateQueue.includes(guild.id)) client.counterUpdateQueue.push(guild.id);
   }
 
-  // Check if invite tracking is enabled
-  const inviterData = settings.invite.tracking ? await inviteHandler.trackJoinedMember(member) : {};
-
   // Send welcome message
-  greetingHandler.sendWelcome(member, inviterData);
+  greetingHandler.sendWelcome(member);
 };

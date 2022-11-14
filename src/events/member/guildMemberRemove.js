@@ -21,9 +21,6 @@ module.exports = async (client, member) => {
     if (!client.counterUpdateQueue.includes(guild.id)) client.counterUpdateQueue.push(guild.id);
   }
 
-  // Invite Tracker
-  const inviterData = await inviteHandler.trackLeftMember(guild, member.user);
-
   // Farewell message
-  greetingHandler.sendFarewell(member, inviterData);
+  greetingHandler.sendFarewell(member);
 };
