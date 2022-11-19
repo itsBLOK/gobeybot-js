@@ -115,7 +115,7 @@ module.exports = {
   STATS: {
     ENABLED: true,
     XP_COOLDOWN: 5, // Cooldown in seconds between messages
-    DEFAULT_LVL_UP_MSG: "{member:tag}, You just advanced to **Level {level}**",
+    DEFAULT_LVL_UP_MSG: "{member:mention}, You just advanced to **Level {level}**",
   },
 
   SUGGESTIONS: {
