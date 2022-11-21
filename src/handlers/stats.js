@@ -62,9 +62,7 @@ module.exports = {
       statsDb.level = level;
       let lvlUpMessage = settings.stats.xp.message;
       lvlUpMessage = parse(lvlUpMessage, message.member, level);
-      const lvlUpChannel = message.channel;
-
-      lvlUpChannel.safeSend(lvlUpMessage);
+      message.channel.safeSend(lvlUpMessage);
     }
     await statsDb.save();
     cooldownCache.set(key, Date.now());
