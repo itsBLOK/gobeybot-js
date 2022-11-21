@@ -34,9 +34,9 @@ module.exports = {
 
   DASHBOARD: {
     enabled: true, // enable or disable dashboard
-    baseURL: "http://localhost:8080", // base url
-    failureURL: "http://localhost:8080", // failure redirect url
-    port: "8080", // port to run the bot on
+    baseURL: "http://localhost:3966", // base url
+    failureURL: "http://localhost:3966", // failure redirect url
+    port: "3966", // port to run the bot on
   },
 
   ECONOMY: {
@@ -83,8 +83,15 @@ module.exports = {
     BASE_API: "https://image-api.strangebot.fun",
   },
 
-  TWITCH: {
+  ANNOUNCEMENT: {
     ENABLED: true,
+    EMBED_COLORS: {
+      TWITCH: "#6441a5",
+      YOUTUBE: "#FF0000",
+      TWITTER: "#1DA1F2",
+      INSTAGRAM: "#E1306C",
+      TIKTOK: "#00F2EA",
+    }
   },
 
   MODERATION: {
