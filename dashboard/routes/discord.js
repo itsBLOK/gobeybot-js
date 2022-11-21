@@ -17,14 +17,14 @@ router.get("/login", async function (req, res) {
       `https://discordapp.com/api/oauth2/authorize?client_id=${
         req.client.user.id
       }&scope=identify%20guilds&response_type=code&redirect_uri=${encodeURIComponent(
-        req.client.config.DASHBOARD.baseURL + "/api/callback"
+        req.client.config.DASHBOARD.baseURL + "/auth/discord-callback"
       )}&state=${req.query.state || "no"}`
     );
   }
   res.redirect("/selector");
 });
 
-router.get("/callback", async (req, res) => {
+router.get("/discord-callback", async (req, res) => {
   if (!req.query.code) return res.redirect(req.client.config.DASHBOARD.failureURL);
   if (req.query.state && req.query.state.startsWith("invite")) {
     if (req.query.code) {
@@ -37,7 +37,7 @@ router.get("/callback", async (req, res) => {
   const params = new URLSearchParams();
   params.set("grant_type", "authorization_code");
   params.set("code", req.query.code);
-  params.set("redirect_uri", `${req.client.config.DASHBOARD.baseURL}/api/callback`);
+  params.set("redirect_uri", `${req.client.config.DASHBOARD.baseURL}/auth/discord-callback`);
   let response = await fetch("https://discord.com/api/oauth2/token", {
     method: "POST",
     body: params.toString(),
@@ -52,7 +52,7 @@ router.get("/callback", async (req, res) => {
   if (tokens.error || !tokens.access_token) {
     req.client.logger.debug(tokens);
     req.client.logger.error("Failed to login to dashboard");
-    return res.redirect(`/api/login&state=${req.query.state}`);
+    return res.redirect(`/auth/login&state=${req.query.state}`);
   }
   const userData = {
     infos: null,
