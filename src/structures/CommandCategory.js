@@ -12,11 +12,6 @@ module.exports = {
     image: "https://assets-global.website-files.com/5f9072399b2640f14d6a2bf4/632a24dc0918d34459738418_AutoMod-Final-Blog-Author-p-500.png",
     emoji: "🤖",
   },
-  // ANIME: {
-  //   name: "Anime",
-  //   image: "https://wallpaperaccess.com/full/5680679.jpg",
-  //   emoji: "🎨",
-  // },
   ECONOMY: {
     name: "Economy",
     enabled: config.ECONOMY.ENABLED,
@@ -84,6 +79,12 @@ module.exports = {
     enabled: config.TICKET.ENABLED,
     image: "https://cdn-icons-png.flaticon.com/512/2067/2067153.png",
     emoji: "🎫",
+  },
+  ANNOUNCEMENT: {
+    name: "Announcement",
+    enabled: config.ANNOUNCEMENT.ENABLED,
+    image: "https://cdn-icons-png.flaticon.com/512/1040/1040216.png",
+    emoji: "📢",
   },
   UTILITY: {
     name: "Utility",
