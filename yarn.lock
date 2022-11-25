@@ -1570,10 +1570,10 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-enhanced-ms@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/enhanced-ms/-/enhanced-ms-1.0.2.tgz#f0aac3721abc01fac350a180db2cd8f947ddc645"
-  integrity sha512-WSlqw+pePtGbJsAjpWm+l5rS/OdCWLNuNyuNLuuI3rVr1MgmlOdD/bB/VlPrjNQIRLf1Lv4fKjb6Z4vgACUw3g==
+enhanced-ms@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/enhanced-ms/-/enhanced-ms-2.2.0.tgz#6c6fbcc0d1efdda36b134f813603c2c5cd9f15fe"
+  integrity sha512-X1ZgAp1HsV/vlZ3KPkWjJHJV9aPDXOXO6may+H7zW1EaQXum4wfIQrJdcjyqeLR9Lkffqr4VlsfmQcMqRPmg1g==
 
 entities@^4.2.0, entities@^4.3.0, entities@^4.4.0:
   version "4.4.0"
