@@ -17,7 +17,7 @@
     "url": "git+https://github.com/itsblok/gobeybot-v1.git"
   },
   "dependencies": {
-    "@vitalets/google-translate-api": "^8.0.0",
+    "@vitalets/google-translate-api": "^9.0.0",
     "ascii-table": "0.0.9",
     "btoa": "^1.2.1",
     "common-tags": "^1.8.2",
