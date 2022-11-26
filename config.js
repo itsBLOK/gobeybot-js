@@ -120,10 +120,10 @@ module.exports = {
   },
 
   PRESENCE: {
-    ENABLED: true, // Whether or not the bot should update its status
+    ENABLED: false, // Whether or not the bot should update its status
     STATUS: "online", // The bot's status [online, idle, dnd, invisible]
     TYPE: "LISTENING", // Status type for the bot [PLAYING | LISTENING | WATCHING | COMPETING]
-    MESSAGE: "/help (BETA)", // Your bot status message
+    MESSAGE: "/help", // Your bot status message
   },
 
   STATS: {
