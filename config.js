@@ -68,6 +68,13 @@ module.exports = {
         identifier: "Lavalink.GA",
         secure: false,
       },
+      {
+        host: "lava2.horizxon.studio",
+        port: 80,
+        password: "horizxon.studio",
+        identifier: "HorizonS",
+        secure: false,
+      },
     ],
   },
 
