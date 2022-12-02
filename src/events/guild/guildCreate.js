@@ -42,7 +42,7 @@ module.exports = async (client, guild) => {
     .setFooter({ text: `Guild #${client.guilds.cache.size}` });
 
   client.joinLeaveWebhook.send({
-    username: "Join",
+    username: "Gobey Bot",
     avatarURL: client.user.displayAvatarURL(),
     embeds: [embed],
   });
