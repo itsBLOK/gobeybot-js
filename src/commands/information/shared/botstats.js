@@ -63,7 +63,7 @@ module.exports = (client) => {
         value: "```" + timeformat(process.uptime()) + "```",
         inline: false,
       })
-      .setFooter({text: 'Gobey Bot • Copyright © 2022 Skyware Inc.',});
+      .setFooter({text: 'Gobey Bot • Copyright © 2022',});
 
   // Buttons
   let components = [];
