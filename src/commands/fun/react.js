@@ -73,7 +73,7 @@ const genReaction = async (category, user) => {
   } catch (ex) {
     return new EmbedBuilder()
       .setColor(EMBED_COLORS.ERROR)
-      .setDescription("Failed to fetch meme. Try again!")
+      .setDescription("Failed to fetch meme. Try again later!")
       .setFooter({ text: `Requested By ${user.tag}` });
   }
 };
