@@ -34,7 +34,7 @@ const pinoLogger = pino.default(
   ])
 );
 
-function sendWebhook(content, err) {
+function sendWebhook(content, err, client) {
   if (!content && !err) return;
   const errString = err?.stack || err;
 
