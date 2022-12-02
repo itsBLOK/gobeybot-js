@@ -2320,10 +2320,10 @@ node-gyp-build@^4.3.0:
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.5.0.tgz#7a64eefa0b21112f89f58379da128ac177f20e40"
   integrity sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==
 
-node@^16.11.0:
-  version "16.18.1"
-  resolved "https://registry.yarnpkg.com/node/-/node-16.18.1.tgz#72850d416f0fe0d2d06bd65c8ad1297570552366"
-  integrity sha512-EHMU2CraupSd6ipC/NW7sOwQWHWlTKsbdKD+XTDGAJJ5S/bgyW0hJxyXf6frfTtBFbN+SukmXfPw31QDr3ukSg==
+node@^19.2.0:
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-19.2.0.tgz#f377e046002065fd1a9a23dd7bffc8026be77847"
+  integrity sha512-ETicZqrcApHCufk8L7HCO6eUe6HmZFN3YmAklYdETyp8Gi10UZGFvVJ/AvihE9i5CueXsebEP/7DgFKjohHXHw==
   dependencies:
     node-bin-setup "^1.0.0"
 
