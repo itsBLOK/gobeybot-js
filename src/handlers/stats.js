@@ -62,9 +62,11 @@ module.exports = {
       statsDb.level = level;
       let lvlUpMessage = settings.stats.xp.message;
       lvlUpMessage = parse(lvlUpMessage, message.member, level);
-      
+
       const xpChannel = settings.stats.xp.channel && message.guild.channels.cache.get(settings.stats.xp.channel);
       const lvlUpChannel = xpChannel || message.channel;
+
+      lvlUpChannel.safeSend(lvlUpMessage);
     }
     await statsDb.save();
     cooldownCache.set(key, Date.now());
@@ -93,7 +95,7 @@ module.exports = {
     if (!oldChannel && !newChannel) return;
     if (!newState.member) return;
 
-    const member = await newState.member.fetch();
+    const member = await newState.member.fetch().catch(() => {});
     if (member.user.bot) return;
 
     // Member joined a voice channel

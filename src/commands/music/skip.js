@@ -10,6 +10,7 @@ module.exports = {
   validations: musicValidations,
   command: {
     enabled: true,
+    aliases: ["next"],
   },
   slashCommand: {
     enabled: true,
@@ -26,9 +27,11 @@ module.exports = {
   },
 };
 
+/**
+ * @param {import("discord.js").CommandInteraction|import("discord.js").Message} arg0
+ */
 function skip({ client, guildId }) {
-  const player = client.erelaManager.get(guildId);
+  const player = client.musicManager.getPlayer(guildId);
   const { title } = player.queue.current;
-  player.stop();
-  return `⏯️ ${title} was skipped.`;
+  return player.queue.next() ? `⏯️ ${title} was skipped.` : "⏯️ There is no song to skip.";
 }

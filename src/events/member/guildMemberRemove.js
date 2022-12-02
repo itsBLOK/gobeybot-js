@@ -1,4 +1,4 @@
-const { inviteHandler, greetingHandler } = require("@src/handlers");
+const { greetingHandler } = require("@src/handlers");
 const { getSettings } = require("@schemas/Guild");
 
 /**

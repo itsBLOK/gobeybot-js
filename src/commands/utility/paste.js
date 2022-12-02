@@ -7,7 +7,7 @@ const { postToBin } = require("@helpers/HttpUtils");
  */
 module.exports = {
   name: "paste",
-  description: "paste something in sourceb.in",
+  description: "Paste something in sourceb.in",
   cooldown: 5,
   category: "UTILITY",
   botPermissions: ["EmbedLinks"],

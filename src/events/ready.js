@@ -1,4 +1,4 @@
-const { counterHandler, inviteHandler, presenceHandler } = require("@src/handlers");
+const { counterHandler, presenceHandler } = require("@src/handlers");
 const { cacheReactionRoles } = require("@schemas/ReactionRoles");
 const { getSettings } = require("@schemas/Guild");
 
@@ -10,7 +10,7 @@ module.exports = async (client) => {
 
   // Initialize Music Manager
   if (client.config.MUSIC.ENABLED) {
-    client.erelaManager.init(client.user.id);
+    client.musicManager.connect(client.user.id);
     client.logger.success("Music Manager initialized");
   }
 

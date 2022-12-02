@@ -81,10 +81,10 @@ module.exports = {
     }
 
     const embedError = new EmbedBuilder()
-      .setColor(EMBED_COLORS.ERROR)
-      .setDescription('<:redTick:862442953447440414> **No matching command found**')
-    // No matching command/category found
-    await interaction.followUp({ embeds: [embedError] });
+    .setColor(EMBED_COLORS.ERROR)
+    .setDescription('<:redTick:862442953447440414> **No matching command found**')
+  // No matching command/category found
+  await interaction.followUp({ embeds: [embedError] });
   },
 };
 
@@ -118,16 +118,16 @@ async function getHelpMenu({ client, guild }) {
   let buttonsRow = new ActionRowBuilder().addComponents(components);
 
   const embed = new EmbedBuilder()
-    .setColor(EMBED_COLORS.BOT_EMBED)
-    .setAuthor({ name: 'Help is on the way!'})
-    .setThumbnail(client.user.displayAvatarURL())
-    .addFields(
-      { name: 'Commands list', value: 'Type `/` to view a list of slash commands, or [view the documentation.](https://docs.gobey.bot/)' },
-      { name: 'Dashboard', value: `Configure Gobey's settings for your server online. [Visit Dashboard](https://gobey.bot/)` },
-      { name: 'Documentation', value: 'Learn how to set up Gobey in your server using our in-depth guides. [View documentation](https://docs.gobey.bot/getting-started)'},
-      { name: 'Change your language', value: 'Want to use Streamcord in a different language? \nUse `/language list` to view a list of translations.'},
-      { name: 'Gobey Plus', value: 'Upgrade your server to get access to unlock exclusive features. [Learn more](https://gobey.bot/plus?s=discord)'},
-    );
+  .setColor(EMBED_COLORS.BOT_EMBED)
+  .setAuthor({ name: 'Help is on the way!'})
+  .setThumbnail(client.user.displayAvatarURL())
+  .addFields(
+    { name: 'Commands list', value: 'Type `/` to view a list of slash commands, or [view the documentation.](https://docs.gobey.bot/)' },
+    { name: 'Dashboard', value: `Configure Gobey's settings for your server online. [Visit Dashboard](https://gobey.bot/)` },
+    { name: 'Documentation', value: 'Learn how to set up Gobey in your server using our in-depth guides. [View documentation](https://docs.gobey.bot/getting-started)'},
+    { name: 'Change your language', value: 'Want to use Streamcord in a different language? \nUse `/language list` to view a list of translations.'},
+    { name: 'Gobey Plus', value: 'Upgrade your server to get access to unlock exclusive features. [Learn more](https://gobey.bot/plus?s=discord)'},
+  );
 
   return {
     embeds: [embed],
@@ -226,7 +226,7 @@ function getSlashCategoryEmbeds(client, category) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setAuthor({ name: `${category} Plugin Commands` })
+      .setAuthor({ name: `${category} Module Commands` })
       .setDescription(collector);
 
     return [embed];
@@ -239,7 +239,7 @@ function getSlashCategoryEmbeds(client, category) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setAuthor({ name: `${category} Plugin Commands` })
+      .setAuthor({ name: `${category} Module Commands` })
       .setDescription("No commands in this category");
 
     return [embed];
@@ -255,8 +255,9 @@ function getSlashCategoryEmbeds(client, category) {
       const subCmds = cmd.slashCommand.options?.filter((opt) => opt.type === "SUB_COMMAND");
       const subCmdsString = subCmds?.map((s) => s.name).join(", ");
 
-      return `\`/${cmd.name}\`\n ${cmd.description}\n ${!subCmds?.length ? "" : `**[${subCmds?.length}]**: ${subCmdsString}\n`
-        } `;
+      return `\`/${cmd.name}\`\n ${cmd.description}\n ${
+        !subCmds?.length ? "" : `[${subCmds?.length}] ${subCmdsString}\n`
+      } `;
     });
 
     arrSplitted.push(toAdd);
@@ -266,7 +267,7 @@ function getSlashCategoryEmbeds(client, category) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setAuthor({ name: `${category} Plugin Commands` })
+      .setAuthor({ name: `${category} Module Commands` })
       .setDescription(item.join("\n"))
       .setFooter({ text: `page ${index + 1} of ${arrSplitted.length}` });
     arrEmbeds.push(embed);
@@ -304,7 +305,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setAuthor({ name: `${category} Plugin Commands` })
+      .setAuthor({ name: `${category} Module Commands` })
       .setDescription(collector);
 
     return [embed];
@@ -317,7 +318,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setAuthor({ name: `${category} Plugin Commands` })
+      .setAuthor({ name: `${category} Module Commands` })
       .setDescription("No commands in this category");
 
     return [embed];
@@ -328,7 +329,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
 
   while (commands.length) {
     let toAdd = commands.splice(0, commands.length > CMDS_PER_PAGE ? CMDS_PER_PAGE : commands.length);
-    toAdd = toAdd.map((cmd) => `\`${prefix}${cmd.name}\`\n ${cmd.description}\n`);
+    toAdd = toAdd.map((cmd) => `\`${prefix}${cmd.name}\`\n ❯ ${cmd.description}\n`);
     arrSplitted.push(toAdd);
   }
 
@@ -336,7 +337,7 @@ function getMsgCategoryEmbeds(client, category, prefix) {
     const embed = new EmbedBuilder()
       .setColor(EMBED_COLORS.BOT_EMBED)
       .setThumbnail(CommandCategory[category]?.image)
-      .setAuthor({ name: `${category} Plugin Commands` })
+      .setAuthor({ name: `${category} Module Commands` })
       .setDescription(item.join("\n"))
       .setFooter({
         text: `page ${index + 1} of ${arrSplitted.length} | Type ${prefix}help <command> for more command information`,

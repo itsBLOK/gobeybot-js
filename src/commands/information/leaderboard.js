@@ -1,7 +1,7 @@
 const { EmbedBuilder, escapeInlineCode, ApplicationCommandOptionType } = require("discord.js");
 const { EMBED_COLORS } = require("@root/config");
-const { getInvitesLb } = require("@schemas/Member");
 const { getXpLb } = require("@schemas/MemberStats");
+const { getReputationLb } = require("@schemas/User");
 
 /**
  * @type {import("@structures/Command")}
@@ -15,7 +15,7 @@ module.exports = {
     enabled: true,
     aliases: ["lb"],
     minArgsCount: 1,
-    usage: "<xp|invite>",
+    usage: "<xp|rep>",
   },
   slashCommand: {
     enabled: true,
@@ -30,10 +30,10 @@ module.exports = {
             name: "xp",
             value: "xp",
           },
-          // {
-          //   name: "invite",
-          //   value: "invite",
-          // },
+          {
+            name: "rep",
+            value: "rep",
+          },
         ],
       },
     ],
@@ -44,8 +44,8 @@ module.exports = {
     let response;
 
     if (type === "xp") response = await getXpLeaderboard(message, message.author, data.settings);
-    else if (type === "invite") response = await getInviteLeaderboard(message, message.author, data.settings);
-    else response = "Invalid Leaderboard type. Choose either `xp` or `invite`";
+    else if (type === "rep") response = await getRepLeaderboard(message.author);
+    else response = "Invalid Leaderboard type. Choose either `xp` or `rep`";
     await message.safeReply(response);
   },
 
@@ -54,8 +54,8 @@ module.exports = {
     let response;
 
     if (type === "xp") response = await getXpLeaderboard(interaction, interaction.user, data.settings);
-    else if (type === "invite") response = await getInviteLeaderboard(interaction, interaction.user, data.settings);
-    else response = "Invalid Leaderboard type. Choose either `xp` or `invite`";
+    else if (type === "rep") response = await getRepLeaderboard(interaction.user);
+    else response = "Invalid Leaderboard type. Choose either `xp` or `rep`";
 
     await interaction.followUp(response);
   },
@@ -86,28 +86,16 @@ async function getXpLeaderboard({ guild }, author, settings) {
   return { embeds: [embed] };
 }
 
-async function getInviteLeaderboard({ guild }, author, settings) {
-  if (!settings.invite.tracking) return "Invite tracking is disabled on this server";
-
-  const lb = await getInvitesLb(guild.id, 10);
+async function getRepLeaderboard(author) {
+  const lb = await getReputationLb(10);
   if (lb.length === 0) return "No users in the leaderboard";
 
-  let collector = "";
-  for (let i = 0; i < lb.length; i++) {
-    try {
-      const memberId = lb[i].member_id;
-      if (memberId === "VANITY") collector += `**#${(i + 1).toString()}** - Vanity URL [${lb[i].invites}]\n`;
-      else {
-        const user = await author.client.users.fetch(lb[i].member_id);
-        collector += `**#${(i + 1).toString()}** - ${escapeInlineCode(user.tag)} [${lb[i].invites}]\n`;
-      }
-    } catch (ex) {
-      collector += `**#${(i + 1).toString()}** - DeletedUser#0000 [${lb[i].invites}]\n`;
-    }
-  }
+  const collector = lb
+    .map((user, i) => `**#${(i + 1).toString()}** - ${escapeInlineCode(user.username)} (${user.reputation?.received})`)
+    .join("\n");
 
   const embed = new EmbedBuilder()
-    .setAuthor({ name: "Invite Leaderboard" })
+    .setAuthor({ name: "Reputation Leaderboard" })
     .setColor(EMBED_COLORS.BOT_EMBED)
     .setDescription(collector)
     .setFooter({ text: `Requested by ${author.tag}` });

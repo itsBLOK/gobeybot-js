@@ -1,7 +1,10 @@
 module.exports = {
   OWNER_IDS: "263379376995827714", // Bot owner ID's
-  PREFIX: "!", // Default prefix for the bot
   SUPPORT_SERVER: "https://discord.gg/fMe722v6E2", // Your bot support server
+  PREFIX_COMMANDS: {
+    ENABLED: true, // Enable/Disable prefix commands
+    DEFAULT_PREFIX: "!", // Default prefix for the bot
+  },
   INTERACTIONS: {
     SLASH: true, // Should the interactions be enabled
     CONTEXT: true, // Should contexts be enabled
@@ -48,20 +51,21 @@ module.exports = {
   },
 
   MUSIC: {
-    ENABLED: true,
-    IDLE_TIME: 60, // Time in seconds before the bot disconnects from the voice channel
+    ENABLED: false,
+    IDLE_TIME: 120, // Time in seconds before the bot disconnects from an idle voice channel
     MAX_SEARCH_RESULTS: 5,
+    DEFAULT_SOURCE: "SC", // YT or YTM or SC
     // Add any number of lavalink nodes here
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
-    NODES: [
-//      {
-//        host: "localhost",
-//        port: 2333,
-//        password: "youshallnotpass",
-//        identifier: "Local Node",
-//        secure: false,
-//      },
-       {
+    LAVALINK_NODES: [
+      //      {
+      //        host: "localhost",
+      //        port: 2333,
+      //        password: "youshallnotpass",
+      //        identifier: "Local Node",
+      //        secure: false,
+      //      },
+      {
         host: "lavalink.oops.wtf",
         port: 2000,
         password: "www.freelavalink.ga",
@@ -87,18 +91,7 @@ module.exports = {
 
   IMAGE: {
     ENABLED: true,
-    BASE_API: "https://image-api.strangebot.fun",
-  },
-
-  ANNOUNCEMENT: {
-    ENABLED: true,
-    EMBED_COLORS: {
-      TWITCH: "#6441a5",
-      YOUTUBE: "#FF0000",
-      TWITTER: "#1DA1F2",
-      INSTAGRAM: "#E1306C",
-      TIKTOK: "#00F2EA",
-    }
+    BASE_API: "https://strangeapi.fun/api",
   },
 
   MODERATION: {
@@ -119,11 +112,22 @@ module.exports = {
     },
   },
 
+  ANNOUNCEMENT: {
+    ENABLED: true,
+    EMBED_COLORS: {
+      TWITCH: "#6441a5",
+      YOUTUBE: "#FF0000",
+      TWITTER: "#1DA1F2",
+      INSTAGRAM: "#E1306C",
+      TIKTOK: "#00F2EA",
+    }
+  },
+  
   PRESENCE: {
     ENABLED: false, // Whether or not the bot should update its status
     STATUS: "online", // The bot's status [online, idle, dnd, invisible]
     TYPE: "LISTENING", // Status type for the bot [PLAYING | LISTENING | WATCHING | COMPETING]
-    MESSAGE: "/help", // Your bot status message
+    MESSAGE: "{members} members in {servers} server", // Your bot status message
   },
 
   STATS: {

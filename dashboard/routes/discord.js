@@ -16,12 +16,12 @@ router.get("/login", async function (req, res) {
     return res.redirect(
       `https://discordapp.com/api/oauth2/authorize?client_id=${
         req.client.user.id
-      }&scope=identify%20guilds&response_type=code&redirect_uri=${encodeURIComponent(
+      }&scope=identify%20guilds%20email%20applications.commands.permissions.update&response_type=code&redirect_uri=${encodeURIComponent(
         req.client.config.DASHBOARD.baseURL + "/auth/discord-callback"
       )}&state=${req.query.state || "no"}`
     );
   }
-  res.redirect("/selector");
+  res.redirect("/dashboard");
 });
 
 router.get("/discord-callback", async (req, res) => {
@@ -33,7 +33,7 @@ router.get("/discord-callback", async (req, res) => {
       return res.redirect("/manage/" + guildID);
     }
   }
-  const redirectURL = req.client.states[req.query.state] || "/selector";
+  const redirectURL = req.client.states[req.query.state] || "/dashboard";
   const params = new URLSearchParams();
   params.set("grant_type", "authorization_code");
   params.set("code", req.query.code);

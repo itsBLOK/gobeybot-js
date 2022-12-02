@@ -1,9 +1,9 @@
 version: "4"
 
 services:
-  gobeybot-v1:
-    image: itsblok/gobeybot-v1:1.0.0
-    container_name: gobeybot-v1
+  discord-js-bot:
+    image: itsblok/gobeybot-js:2.1.0
+    container_name: gobeybot-js
     restart: unless-stopped
     networks:
       - lavalink-net

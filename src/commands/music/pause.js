@@ -26,8 +26,11 @@ module.exports = {
   },
 };
 
+/**
+ * @param {import("discord.js").CommandInteraction|import("discord.js").Message} arg0
+ */
 function pause({ client, guildId }) {
-  const player = client.erelaManager.get(guildId);
+  const player = client.musicManager.getPlayer(guildId);
   if (player.paused) return "The player is already paused.";
 
   player.pause(true);

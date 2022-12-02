@@ -3,11 +3,11 @@ const express = require("express"),
   router = express.Router();
 
 router.get("/", CheckAuth, async (req, res) => {
-  res.redirect("/selector");
+  res.redirect("/dashboard");
 });
 
-router.get("/selector", CheckAuth, async (req, res) => {
-  res.render("selector", {
+router.get("/dashboard", CheckAuth, async (req, res) => {
+  res.render("dashboard", {
     user: req.userInfos,
     currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
   });

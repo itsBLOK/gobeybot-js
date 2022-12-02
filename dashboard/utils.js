@@ -17,10 +17,10 @@ async function fetchUser(userData, client, query) {
       }
       guild.settingsUrl = client.guilds.cache.get(guild.id)
         ? `/manage/${guild.id}/`
-        : `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2146958847&guild_id=${guild.id}`;
+        : `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot+applications.commands&permissions=296150887519&guild_id=${guild.id}`;
       guild.statsUrl = client.guilds.cache.get(guild.id)
         ? `/stats/${guild.id}/`
-        : `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2146958847&guild_id=${guild.id}`;
+        : `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot+applications.commands&permissions=296150887519&guild_id=${guild.id}`;
       guild.iconURL = guild.icon
         ? `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=128`
         : "https://discordemoji.com/assets/emoji/discordcry.png";

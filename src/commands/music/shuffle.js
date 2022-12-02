@@ -26,8 +26,11 @@ module.exports = {
   },
 };
 
+/**
+ * @param {import("discord.js").CommandInteraction|import("discord.js").Message} arg0
+ */
 function shuffle({ client, guildId }) {
-  const player = client.erelaManager.get(guildId);
+  const player = client.musicManager.getPlayer(guildId);
   player.queue.shuffle();
   return "🎶 Queue has been shuffled";
 }

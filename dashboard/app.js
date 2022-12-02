@@ -33,7 +33,7 @@ module.exports.launch = async (client) => {
       session({
         secret: process.env.SESSION_PASSWORD,
         cookie: { maxAge: new Date(Date.now() + 12096e5) },
-        name: "Connection",
+        name: "djs_connection_cookie",
         resave: true,
         saveUninitialized: false,
         store: MongoStore.create({
@@ -47,7 +47,7 @@ module.exports.launch = async (client) => {
       if (req.user && req.url !== "/") req.userInfos = await utils.fetchUser(req.user, req.client);
       next();
     })
-    .use("/api", discordAPIRouter)
+    .use("/auth", discordAPIRouter)
     .use("/logout", logoutRouter)
     .use("/manage", guildManagerRouter)
     .use("/", mainRouter)

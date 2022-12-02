@@ -14,7 +14,6 @@ module.exports = (client) => {
   const users = client.guilds.cache.reduce((size, g) => size + g.memberCount, 0);
 
   // CPU
-
   const cores = os.cpus().length;
   const cpuUsage = `${(process.cpuUsage().user / 1024 / 1024).toFixed(2)} MB`;
 
@@ -64,7 +63,7 @@ module.exports = (client) => {
         value: "```" + timeformat(process.uptime()) + "```",
         inline: false,
       })
-    .setFooter({text: 'Gobey Bot • Copyright © 2022 Skyware Inc.',});
+      .setFooter({text: 'Gobey Bot • Copyright © 2022 Skyware Inc.',});
 
   // Buttons
   let components = [];
@@ -79,7 +78,7 @@ module.exports = (client) => {
   if (SUPPORT_SERVER) {
     components.push(new ButtonBuilder().setLabel("Support Server").setEmoji("1006530589979062334").setURL(SUPPORT_SERVER).setStyle(ButtonStyle.Link));
   }
-
+  
   let buttonsRow = new ActionRowBuilder().addComponents(components);
 
   return { embeds: [embed], components: [buttonsRow] };

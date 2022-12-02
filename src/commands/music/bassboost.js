@@ -65,9 +65,13 @@ module.exports = {
   },
 };
 
+/**
+ * @param {import("discord.js").CommandInteraction|import("discord.js").Message} arg0
+ * @param {number} level
+ */
 function setBassBoost({ client, guildId }, level) {
-  const player = client.erelaManager.get(guildId);
+  const player = client.musicManager.getPlayer(guildId);
   const bands = new Array(3).fill(null).map((_, i) => ({ band: i, gain: levels[level] }));
-  player.setEQ(...bands);
+  player.setEqualizer(...bands);
   return `> Set the bassboost level to \`${level}\``;
 }

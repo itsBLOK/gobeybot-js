@@ -20,9 +20,10 @@ module.exports = async (client, oldState, newState) => {
     if (oldState.channel.members.size === 1) {
       setTimeout(() => {
         // if 1 (you), wait 1 minute
-        if (!oldState.channel.members.size - 1)
-          // if there's still 1 member,
-          client.erelaManager.get(guild.id) && client.erelaManager.get(guild.id).destroy();
+        if (!oldState.channel.members.size - 1) {
+          const player = client.musicManager.getPlayer(guild.id);
+          if (player) player.destroy(); // destroy the player
+        }
       }, client.config.MUSIC.IDLE_TIME * 1000);
     }
   }

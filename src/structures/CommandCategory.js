@@ -75,13 +75,13 @@ module.exports = {
     emoji: "📝",
   },
   TICKET: {
-    name: "Ticket Module",
+    name: "Ticket",
     enabled: config.TICKET.ENABLED,
 //    image: "https://cdn-icons-png.flaticon.com/512/2067/2067153.png",
     emoji: "🎫",
   },
   ANNOUNCEMENT: {
-    name: "Announcement",
+    name: "Announcement (UNRELEASED)",
     enabled: config.ANNOUNCEMENT.ENABLED,
 //    image: "https://cdn-icons-png.flaticon.com/512/1040/1040216.png",
     emoji: "📢",

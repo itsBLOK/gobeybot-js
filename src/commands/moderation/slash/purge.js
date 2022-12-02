@@ -14,6 +14,7 @@ module.exports = {
   },
   slashCommand: {
     enabled: true,
+    ephemeral: true,
     options: [
       {
         name: "all",
@@ -157,15 +158,13 @@ module.exports = {
     const channel = options.getChannel("channel");
     const amount = options.getInteger("amount") || 99;
 
+    if (amount > 100) return interaction.followUp("The max amount of messages that I can delete is 99");
+
     let response;
     switch (sub) {
       case "all":
         response = await purgeMessages(member, channel, "ALL", amount);
         break;
-      
-      case "clear":
-        response = await purgeMessages(member, channel, "CL", amount);
-      break;
 
       case "attachments":
         response = await purgeMessages(member, channel, "ATTACHMENT", amount);
@@ -187,7 +186,7 @@ module.exports = {
 
       case "user": {
         const user = interaction.options.getUser("user");
-        response = await purgeMessages(member, channel, "TOKEN", amount, user);
+        response = await purgeMessages(member, channel, "USER", amount, user);
         break;
       }
 
@@ -197,10 +196,7 @@ module.exports = {
 
     // Success
     if (typeof response === "number") {
-      const message = `Successfully cleaned ${response} messages in ${channel}`;
-      if (channel.id !== interaction.channelId) await interaction.followUp(message);
-      else await channel.safeSend(message, 5);
-      return;
+      return interaction.followUp(`Successfully cleaned ${response} messages in ${channel}`);
     }
 
     // Member missing permissions

@@ -26,6 +26,5 @@ module.exports = {
     TranslateLog: require("./schemas/TranslateLog").model,
     User: require("./schemas/User"),
     Suggestions: require("./schemas/Suggestions").model,
-    Twitch: require("./schemas/Twitch").model,
   },
 };
