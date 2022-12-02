@@ -51,7 +51,7 @@ module.exports = {
   },
 
   MUSIC: {
-    ENABLED: false,
+    ENABLED: true,
     IDLE_TIME: 120, // Time in seconds before the bot disconnects from an idle voice channel
     MAX_SEARCH_RESULTS: 5,
     DEFAULT_SOURCE: "SC", // YT or YTM or SC
@@ -70,13 +70,6 @@ module.exports = {
         port: 2000,
         password: "www.freelavalink.ga",
         identifier: "Lavalink.GA",
-        secure: false,
-      },
-      {
-        host: "lava2.horizxon.studio",
-        port: 80,
-        password: "horizxon.studio",
-        identifier: "HorizonS",
         secure: false,
       },
     ],
