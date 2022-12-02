@@ -1414,7 +1414,7 @@ discord.js@^13.1.0:
     node-fetch "^2.6.7"
     ws "^8.9.0"
 
-discord.js@^14.2.0, discord.js@^14.6.0:
+discord.js@^14.2.0, discord.js@^14.7.1:
   version "14.7.1"
   resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.7.1.tgz#26079d0ff4d27daf02480a403c456121f0682bd9"
   integrity sha512-1FECvqJJjjeYcjSm0IGMnPxLqja/pmG1B0W2l3lUY2Gi4KXiyTeQmU1IxWcbXHn2k+ytP587mMWqva2IA87EbA==
@@ -2320,10 +2320,10 @@ node-gyp-build@^4.3.0:
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.5.0.tgz#7a64eefa0b21112f89f58379da128ac177f20e40"
   integrity sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==
 
-node@^16.11.0:
-  version "16.18.1"
-  resolved "https://registry.yarnpkg.com/node/-/node-16.18.1.tgz#72850d416f0fe0d2d06bd65c8ad1297570552366"
-  integrity sha512-EHMU2CraupSd6ipC/NW7sOwQWHWlTKsbdKD+XTDGAJJ5S/bgyW0hJxyXf6frfTtBFbN+SukmXfPw31QDr3ukSg==
+node@^19.2.0:
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-19.2.0.tgz#f377e046002065fd1a9a23dd7bffc8026be77847"
+  integrity sha512-ETicZqrcApHCufk8L7HCO6eUe6HmZFN3YmAklYdETyp8Gi10UZGFvVJ/AvihE9i5CueXsebEP/7DgFKjohHXHw==
   dependencies:
     node-bin-setup "^1.0.0"
 
@@ -2517,10 +2517,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier@2.7.1:
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
-  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
+prettier@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.0.tgz#c7df58393c9ba77d6fba3921ae01faf994fb9dc9"
+  integrity sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==
 
 pretty-ms@^7.0.1:
   version "7.0.1"

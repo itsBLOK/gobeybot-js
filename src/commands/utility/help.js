@@ -122,11 +122,11 @@ async function getHelpMenu({ client, guild }) {
   .setAuthor({ name: 'Help is on the way!'})
   .setThumbnail(client.user.displayAvatarURL())
   .addFields(
-    { name: 'Commands list', value: 'Type `/` to view a list of slash commands, or [view the documentation.](https://docs.gobey.bot/)' },
-    { name: 'Dashboard', value: `Configure Gobey's settings for your server online. [Visit Dashboard](https://gobey.bot/)` },
-    { name: 'Documentation', value: 'Learn how to set up Gobey in your server using our in-depth guides. [View documentation](https://docs.gobey.bot/getting-started)'},
-    { name: 'Change your language', value: 'Want to use Streamcord in a different language? \nUse `/language list` to view a list of translations.'},
-    { name: 'Gobey Plus', value: 'Upgrade your server to get access to unlock exclusive features. [Learn more](https://gobey.bot/plus?s=discord)'},
+    { name: 'Commands list', value: 'Type `/` to view a list of slash commands, or [view the documentation.](https://docs.gobeybot.xyz/)' },
+    { name: 'Dashboard', value: `Configure Gobey's settings for your server online. [Visit Dashboard](https://gobeybot.xyz/)` },
+    { name: 'Documentation', value: 'Learn how to set up Gobey in your server using our in-depth guides. [View documentation](https://docs.gobeybot.xyz/getting-started)'},
+    { name: 'Change your language ` UNRELEASED `', value: 'Want to use Streamcord in a different language? \nUse `/language list` to view a list of translations.'},
+    { name: 'Gobey Plus', value: 'Upgrade your server to get access to unlock exclusive features. [Learn more](https://gobeybot.xyz/plus?s=discord)'},
   );
 
   return {

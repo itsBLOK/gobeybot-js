@@ -73,8 +73,8 @@ module.exports = (client) => {
       new ButtonBuilder().setLabel("Dashboard").setURL(DASHBOARD.baseURL).setStyle(ButtonStyle.Link).setDisabled(true)
     );
   }
-  components.push(new ButtonBuilder().setLabel("Documentation").setEmoji("➡️").setURL("https://docs.gobey.bot/getting-started").setStyle(ButtonStyle.Link).setDisabled(true));
-  components.push(new ButtonBuilder().setLabel("Help Center").setEmoji("1008778395020185643").setURL("https://support.gobey.bot/help/contact").setStyle(ButtonStyle.Link).setDisabled(true));
+  components.push(new ButtonBuilder().setLabel("Documentation").setEmoji("➡️").setURL("https://docs.gobeybot.xyz/getting-started").setStyle(ButtonStyle.Link).setDisabled(true));
+  components.push(new ButtonBuilder().setLabel("Help Center").setEmoji("1008778395020185643").setURL("https://support.gobeybot.xyz/help/contact").setStyle(ButtonStyle.Link).setDisabled(true));
   if (SUPPORT_SERVER) {
     components.push(new ButtonBuilder().setLabel("Support Server").setEmoji("1006530589979062334").setURL(SUPPORT_SERVER).setStyle(ButtonStyle.Link));
   }
