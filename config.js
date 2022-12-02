@@ -53,23 +53,33 @@ module.exports = {
   MUSIC: {
     ENABLED: true,
     IDLE_TIME: 120, // Time in seconds before the bot disconnects from an idle voice channel
-    MAX_SEARCH_RESULTS: 5,
+    MAX_SEARCH_RESULTS: 6,
     DEFAULT_SOURCE: "SC", // YT or YTM or SC
     // Add any number of lavalink nodes here
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
     LAVALINK_NODES: [
-      //      {
-      //        host: "localhost",
-      //        port: 2333,
-      //        password: "youshallnotpass",
-      //        identifier: "Local Node",
-      //        secure: false,
-      //      },
       {
         host: "lavalink.oops.wtf",
         port: 2000,
         password: "www.freelavalink.ga",
-        identifier: "Lavalink.GA",
+        id: "Lavalink.GA",
+        retryDelay: 5000,
+        secure: false,
+      },
+      {
+        host: "5.161.69.81",
+        port: 25016,
+        password: "Jm506914522",
+        id: "Lavalink 1",
+        retryDelay: 5000,
+        secure: false,
+      },
+      {
+        host: "5.161.69.81",
+        port: 25017,
+        password: "Jm506914522",
+        id: "Lavalink 2",
+        retryDelay: 5000,
         secure: false,
       },
     ],
@@ -115,7 +125,7 @@ module.exports = {
       TIKTOK: "#00F2EA",
     }
   },
-  
+
   PRESENCE: {
     ENABLED: false, // Whether or not the bot should update its status
     STATUS: "online", // The bot's status [online, idle, dnd, invisible]
