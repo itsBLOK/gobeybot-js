@@ -6,7 +6,7 @@ const { EMBED_COLORS } = require("@root/config.js");
  */
 module.exports = {
   name: "setprefix",
-  description: "sets a new prefix for this server",
+  description: "Sets a new prefix for this server",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   command: {
@@ -20,7 +20,7 @@ module.exports = {
     options: [
       {
         name: "newprefix",
-        description: "the new prefix to set",
+        description: "New prefix to set",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

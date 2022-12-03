@@ -6,7 +6,7 @@ const { ActionRowBuilder, SelectMenuBuilder, ApplicationCommandOptionType, Compo
  */
 module.exports = {
   name: "unban",
-  description: "unbans the specified member",
+  description: "Unbans the specified member",
   category: "MODERATION",
   botPermissions: ["BanMembers"],
   userPermissions: ["BanMembers"],
@@ -21,13 +21,13 @@ module.exports = {
     options: [
       {
         name: "name",
-        description: "match the name of the member",
+        description: "Match the name of the member",
         type: ApplicationCommandOptionType.String,
         required: true,
       },
       {
         name: "reason",
-        description: "reason for ban",
+        description: "Reason for ban",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

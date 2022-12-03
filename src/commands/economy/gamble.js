@@ -8,7 +8,7 @@ const { getRandomInt } = require("@helpers/Utils");
  */
 module.exports = {
   name: "gamble",
-  description: "try your luck by gambling",
+  description: "Try your luck by gambling",
   category: "ECONOMY",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -22,7 +22,7 @@ module.exports = {
     options: [
       {
         name: "coins",
-        description: "number of coins to bet",
+        description: "Number of coins to bet",
         required: true,
         type: ApplicationCommandOptionType.Integer,
       },

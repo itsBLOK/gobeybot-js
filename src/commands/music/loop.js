@@ -6,7 +6,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "loop",
-  description: "loops the song or queue",
+  description: "Loops the song or queue",
   category: "MUSIC",
   validations: musicValidations,
   command: {

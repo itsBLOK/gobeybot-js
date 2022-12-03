@@ -5,7 +5,7 @@ const { purgeMessages } = require("@helpers/ModUtils");
  */
 module.exports = {
   name: "purgetoken",
-  description: "deletes the specified amount of messages containing the token",
+  description: "Deletes the specified amount of messages containing the token",
   category: "MODERATION",
   userPermissions: ["ManageMessages"],
   botPermissions: ["ManageMessages", "ReadMessageHistory"],

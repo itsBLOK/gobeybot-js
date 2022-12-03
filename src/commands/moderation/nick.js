@@ -6,7 +6,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "nick",
-  description: "nickname commands",
+  description: "Nickname commands",
   category: "MODERATION",
   botPermissions: ["ManageNicknames"],
   userPermissions: ["ManageNicknames"],
@@ -16,11 +16,11 @@ module.exports = {
     subcommands: [
       {
         trigger: "set <@member> <name>",
-        description: "sets the nickname of the specified member",
+        description: "Sets the nickname of the specified member",
       },
       {
         trigger: "reset <@member>",
-        description: "reset a members nickname",
+        description: "Reset a members nickname",
       },
     ],
   },
@@ -29,18 +29,18 @@ module.exports = {
     options: [
       {
         name: "set",
-        description: "change a members nickname",
+        description: "Change a members nickname",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "the member whose nick you want to set",
+            description: "The member whose nick you want to set",
             type: ApplicationCommandOptionType.User,
             required: true,
           },
           {
             name: "name",
-            description: "the nickname to set",
+            description: "The nickname to set",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -48,12 +48,12 @@ module.exports = {
       },
       {
         name: "reset",
-        description: "reset a members nickname",
+        description: "Reset a members nickname",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "the members whose nick you want to reset",
+            description: "The members whose nick you want to reset",
             type: ApplicationCommandOptionType.User,
             required: true,
           },

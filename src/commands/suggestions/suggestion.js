@@ -9,7 +9,7 @@ const CHANNEL_PERMS = ["ViewChannel", "SendMessages", "EmbedLinks", "ManageMessa
  */
 module.exports = {
   name: "suggestion",
-  description: "configure suggestion system",
+  description: "Configure suggestion system",
   category: "SUGGESTION",
   userPermissions: ["ManageGuild"],
   command: {
@@ -18,35 +18,35 @@ module.exports = {
     subcommands: [
       {
         trigger: "status <on|off>",
-        description: "enable/disable suggestion system",
+        description: "Enable/Disable suggestion system",
       },
       {
         trigger: "channel <#channel|off>",
-        description: "configure suggestion channel or disable it",
+        description: "Configure suggestion channel or disable it",
       },
       {
         trigger: "appch <#channel>",
-        description: "configure approved suggestions channel or disable it",
+        description: "Configure approved suggestions channel or disable it",
       },
       {
         trigger: "rejch <#channel>",
-        description: "configure rejected suggestions channel or disable it",
+        description: "Configure rejected suggestions channel or disable it",
       },
       {
         trigger: "approve <channel> <messageId> [reason]",
-        description: "approve a suggestion",
+        description: "Approve a suggestion",
       },
       {
         trigger: "reject <channel> <messageId> [reason]",
-        description: "reject a suggestion",
+        description: "Reject a suggestion",
       },
       {
         trigger: "staffadd <roleId>",
-        description: "add a staff role",
+        description: "Add a staff role",
       },
       {
         trigger: "staffremove <roleId>",
-        description: "remove a staff role",
+        description: "Remove a staff role",
       },
     ],
   },
@@ -56,12 +56,12 @@ module.exports = {
     options: [
       {
         name: "status",
-        description: "enable or disable suggestion status",
+        description: "Enable or Disable suggestion status",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "enabled or disabled",
+            description: "Enabled or Disabled",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -79,12 +79,12 @@ module.exports = {
       },
       {
         name: "channel",
-        description: "configure suggestion channel or disable it",
+        description: "Configure suggestion channel or disable it",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel_name",
-            description: "the channel where suggestions will be sent",
+            description: "The channel where suggestions will be sent",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: false,
@@ -93,12 +93,12 @@ module.exports = {
       },
       {
         name: "appch",
-        description: "configure approved suggestions channel or disable it",
+        description: "Configure approved suggestions channel or disable it",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel_name",
-            description: "the channel where approved suggestions will be sent",
+            description: "The channel where approved suggestions will be sent",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: false,
@@ -107,12 +107,12 @@ module.exports = {
       },
       {
         name: "rejch",
-        description: "configure rejected suggestions channel or disable it",
+        description: "Configure rejected suggestions channel or disable it",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel_name",
-            description: "the channel where rejected suggestions will be sent",
+            description: "The channel where rejected suggestions will be sent",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: false,
@@ -121,25 +121,25 @@ module.exports = {
       },
       {
         name: "approve",
-        description: "approve a suggestion",
+        description: "Approve a suggestion",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel_name",
-            description: "the channel where message exists",
+            description: "The channel where message exists",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
           },
           {
             name: "message_id",
-            description: "the message id of the suggestion",
+            description: "The message id of the suggestion",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
           {
             name: "reason",
-            description: "the reason for the approval",
+            description: "The reason for the approval",
             type: ApplicationCommandOptionType.String,
             required: false,
           },
@@ -147,25 +147,25 @@ module.exports = {
       },
       {
         name: "reject",
-        description: "reject a suggestion",
+        description: "Reject a suggestion",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel_name",
-            description: "the channel where message exists",
+            description: "The channel where message exists",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
           },
           {
             name: "message_id",
-            description: "the message id of the suggestion",
+            description: "The message id of the suggestion",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
           {
             name: "reason",
-            description: "the reason for the rejection",
+            description: "The reason for the rejection",
             type: ApplicationCommandOptionType.String,
             required: false,
           },
@@ -173,12 +173,12 @@ module.exports = {
       },
       {
         name: "staffadd",
-        description: "add a staff role",
+        description: "Add a staff role",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "role",
-            description: "the role to add as a staff",
+            description: "The role to add as a staff",
             type: ApplicationCommandOptionType.Role,
             required: true,
           },
@@ -186,12 +186,12 @@ module.exports = {
       },
       {
         name: "staffremove",
-        description: "staffremove a staff role",
+        description: "Staffremove a staff role",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "role",
-            description: "the role to staffremove from a staff",
+            description: "The role to staffremove from a staff",
             type: ApplicationCommandOptionType.Role,
             required: true,
           },

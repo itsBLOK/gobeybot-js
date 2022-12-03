@@ -7,7 +7,7 @@ const { stripIndent } = require("common-tags");
  */
 module.exports = {
   name: "automod",
-  description: "various automod configuration",
+  description: "Various automod configuration",
   category: "AUTOMOD",
   userPermissions: ["ManageGuild"],
   command: {
@@ -16,31 +16,31 @@ module.exports = {
     subcommands: [
       {
         trigger: "status",
-        description: "check automod configuration for this guild",
+        description: "Check automod configuration for this guild",
       },
       {
         trigger: "strikes <number>",
-        description: "maximum number of strikes a member can receive before taking an action",
+        description: "Maximum number of strikes a member can receive before taking an action",
       },
       {
         trigger: "action <TIMEOUT|KICK|BAN>",
-        description: "set action to be performed after receiving maximum strikes",
+        description: "Set action to be performed after receiving maximum strikes",
       },
       {
         trigger: "debug <on|off>",
-        description: "turns on automod for messages sent by admins and moderators",
+        description: "Turns on automod for messages sent by admins and moderators",
       },
       {
         trigger: "whitelist",
-        description: "list of channels that are whitelisted",
+        description: "List of channels that are whitelisted",
       },
       {
         trigger: "whitelistadd <channel>",
-        description: "add a channel to the whitelist",
+        description: "Add a channel to the whitelist",
       },
       {
         trigger: "whitelistremove <channel>",
-        description: "remove a channel from the whitelist",
+        description: "Remove a channel from the whitelist",
       },
     ],
   },
@@ -50,17 +50,17 @@ module.exports = {
     options: [
       {
         name: "status",
-        description: "check automod configuration",
+        description: "Check automod configuration",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "strikes",
-        description: "set maximum number of strikes before taking an action",
+        description: "Set maximum number of strikes before taking an action",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "amount",
-            description: "number of strikes (default 5)",
+            description: "Number of strikes (default 5)",
             required: true,
             type: ApplicationCommandOptionType.Integer,
           },
@@ -68,12 +68,12 @@ module.exports = {
       },
       {
         name: "action",
-        description: "set action to be performed after receiving maximum strikes",
+        description: "Set action to be performed after receiving maximum strikes",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "action",
-            description: "action to perform",
+            description: "Action to perform",
             type: ApplicationCommandOptionType.String,
             required: true,
             choices: [
@@ -95,12 +95,12 @@ module.exports = {
       },
       {
         name: "debug",
-        description: "enable/disable automod for messages sent by admins & moderators",
+        description: "Enable/Disable automod for messages sent by admins & moderators",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "configuration status",
+            description: "Configuration status",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -118,17 +118,17 @@ module.exports = {
       },
       {
         name: "whitelist",
-        description: "view whitelisted channels",
+        description: "View whitelisted channels",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "whitelistadd",
-        description: "add a channel to the whitelist",
+        description: "Add a channel to the whitelist",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel to add",
+            description: "Channel to add",
             required: true,
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
@@ -137,12 +137,12 @@ module.exports = {
       },
       {
         name: "whitelistremove",
-        description: "remove a channel from the whitelist",
+        description: "Remove a channel from the whitelist",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel to remove",
+            description: "Channel to remove",
             required: true,
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],

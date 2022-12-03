@@ -8,7 +8,7 @@ const { getReputationLb } = require("@schemas/User");
  */
 module.exports = {
   name: "leaderboard",
-  description: "display the XP leaderboard",
+  description: "Gives you the server leaderboard.",
   category: "INFORMATION",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -22,7 +22,7 @@ module.exports = {
     options: [
       {
         name: "type",
-        description: "type of leaderboard to display",
+        description: "Type of leaderboard to display",
         required: true,
         type: ApplicationCommandOptionType.String,
         choices: [

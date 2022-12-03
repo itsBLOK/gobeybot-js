@@ -9,7 +9,7 @@ const withdraw = require("./sub/withdraw");
  */
 module.exports = {
   name: "bank",
-  description: "access to bank operations",
+  description: "Access to bank operations",
   category: "ECONOMY",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -18,19 +18,19 @@ module.exports = {
     subcommands: [
       {
         trigger: "balance",
-        description: "check your balance",
+        description: "Check your balance",
       },
       {
         trigger: "deposit <coins>",
-        description: "deposit coins to your bank account",
+        description: "Deposit coins to your bank account",
       },
       {
         trigger: "withdraw <coins>",
-        description: "withdraw coins from your bank account",
+        description: "Withdraw coins from your bank account",
       },
       {
         trigger: "transfer <user> <coins>",
-        description: "transfer coins to another user",
+        description: "Transfer coins to another user",
       },
     ],
   },
@@ -39,12 +39,12 @@ module.exports = {
     options: [
       {
         name: "balance",
-        description: "check your coin balance",
+        description: "Check your coin balance",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "name of the user",
+            description: "Name of the user",
             type: ApplicationCommandOptionType.User,
             required: false,
           },
@@ -52,12 +52,12 @@ module.exports = {
       },
       {
         name: "deposit",
-        description: "deposit coins to your bank account",
+        description: "Deposit coins to your bank account",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "coins",
-            description: "number of coins to deposit",
+            description: "Number of coins to deposit",
             type: ApplicationCommandOptionType.Integer,
             required: true,
           },
@@ -65,12 +65,12 @@ module.exports = {
       },
       {
         name: "withdraw",
-        description: "withdraw coins from your bank account",
+        description: "Withdraw coins from your bank account",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "coins",
-            description: "number of coins to withdraw",
+            description: "Number of coins to withdraw",
             type: ApplicationCommandOptionType.Integer,
             required: true,
           },
@@ -78,18 +78,18 @@ module.exports = {
       },
       {
         name: "transfer",
-        description: "transfer coins to other user",
+        description: "Transfer coins to other user",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "the user to whom coins must be transferred",
+            description: "The user to whom coins must be transferred",
             type: ApplicationCommandOptionType.User,
             required: true,
           },
           {
             name: "coins",
-            description: "the amount of coins to transfer",
+            description: "The amount of coins to transfer",
             type: ApplicationCommandOptionType.Integer,
             required: true,
           },

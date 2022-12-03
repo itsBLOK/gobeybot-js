@@ -5,7 +5,7 @@ const { musicValidations } = require("@helpers/BotUtils");
  */
 module.exports = {
   name: "pause",
-  description: "pause the music player",
+  description: "Pause the music player",
   category: "MUSIC",
   validations: musicValidations,
   command: {

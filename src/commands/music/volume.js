@@ -6,7 +6,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "volume",
-  description: "set the music player volume",
+  description: "Set the music player volume",
   category: "MUSIC",
   validations: musicValidations,
   command: {

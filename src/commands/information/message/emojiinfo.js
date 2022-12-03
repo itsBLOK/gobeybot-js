@@ -5,7 +5,7 @@ const emojiInfo = require("../shared/emoji");
  */
 module.exports = {
   name: "emojiinfo",
-  description: "shows info about an emoji",
+  description: "Shows info about an emoji",
   category: "INFORMATION",
   botPermissions: ["EmbedLinks"],
   command: {

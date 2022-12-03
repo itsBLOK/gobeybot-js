@@ -6,7 +6,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "kick",
-  description: "kicks the specified member",
+  description: "Kicks the specified member",
   category: "MODERATION",
   botPermissions: ["KickMembers"],
   userPermissions: ["KickMembers"],
@@ -20,13 +20,13 @@ module.exports = {
     options: [
       {
         name: "user",
-        description: "the target member",
+        description: "The target member",
         type: ApplicationCommandOptionType.User,
         required: true,
       },
       {
         name: "reason",
-        description: "reason for kick",
+        description: "Reason for kick",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

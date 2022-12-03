@@ -19,7 +19,7 @@ const search_prefix = {
  */
 module.exports = {
   name: "search",
-  description: "search for matching songs on youtube",
+  description: "Search for songs",
   category: "MUSIC",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -32,7 +32,7 @@ module.exports = {
     options: [
       {
         name: "query",
-        description: "song to search",
+        description: "Song to search",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

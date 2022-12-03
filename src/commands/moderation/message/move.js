@@ -6,7 +6,7 @@ const move = require("../shared/move");
  */
 module.exports = {
   name: "move",
-  description: "move specified member to voice channel",
+  description: "Move specified member to voice channel",
   category: "MODERATION",
   userPermissions: ["DeafenMembers"],
   botPermissions: ["DeafenMembers"],

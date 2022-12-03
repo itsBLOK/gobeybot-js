@@ -7,7 +7,7 @@ const { ApplicationCommandOptionType, ChannelType } = require("discord.js");
  */
 module.exports = {
   name: "welcome",
-  description: "setup welcome message",
+  description: "Setup welcome message",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   command: {
@@ -16,35 +16,35 @@ module.exports = {
     subcommands: [
       {
         trigger: "status <on|off>",
-        description: "enable or disable welcome message",
+        description: "Enable or Disable welcome message",
       },
       {
         trigger: "channel <#channel>",
-        description: "configure welcome message",
+        description: "Configure welcome message",
       },
       {
         trigger: "preview",
-        description: "preview the configured welcome message",
+        description: "Preview the configured welcome message",
       },
       {
         trigger: "desc <text>",
-        description: "set embed description",
+        description: "Set embed description",
       },
       {
         trigger: "thumbnail <ON|OFF>",
-        description: "enable/disable embed thumbnail",
+        description: "Enable/Disable embed thumbnail",
       },
       {
         trigger: "color <hexcolor>",
-        description: "set embed color",
+        description: "Set embed color",
       },
       {
         trigger: "footer <text>",
-        description: "set embed footer content",
+        description: "Set embed footer content",
       },
       {
         trigger: "image <url>",
-        description: "set embed image",
+        description: "Set embed image",
       },
     ],
   },
@@ -54,12 +54,12 @@ module.exports = {
     options: [
       {
         name: "status",
-        description: "enable or disable welcome message",
+        description: "Enable or Disable welcome message",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "enabled or disabled",
+            description: "Enabled or Disabled",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -77,17 +77,17 @@ module.exports = {
       },
       {
         name: "preview",
-        description: "preview the configured welcome message",
+        description: "Preview the configured welcome message",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "channel",
-        description: "set welcome channel",
+        description: "Set welcome channel",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel name",
+            description: "Channel name",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
@@ -96,12 +96,12 @@ module.exports = {
       },
       {
         name: "desc",
-        description: "set embed description",
+        description: "Set embed description",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "content",
-            description: "description content",
+            description: "Description content",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -109,12 +109,12 @@ module.exports = {
       },
       {
         name: "thumbnail",
-        description: "configure embed thumbnail",
+        description: "Configure embed thumbnail",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "thumbnail status",
+            description: "Thumbnail status",
             type: ApplicationCommandOptionType.String,
             required: true,
             choices: [
@@ -132,12 +132,12 @@ module.exports = {
       },
       {
         name: "color",
-        description: "set embed color",
+        description: "Set embed color",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "hex-code",
-            description: "hex color code",
+            description: "Hex color code",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -145,12 +145,12 @@ module.exports = {
       },
       {
         name: "footer",
-        description: "set embed footer",
+        description: "Set embed footer",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "content",
-            description: "footer content",
+            description: "Footer content",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -158,12 +158,12 @@ module.exports = {
       },
       {
         name: "image",
-        description: "set embed image",
+        description: "Set embed image",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "url",
-            description: "image url",
+            description: "Image url",
             type: ApplicationCommandOptionType.String,
             required: true,
           },

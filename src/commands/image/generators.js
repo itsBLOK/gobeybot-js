@@ -36,7 +36,7 @@ const availableGenerators = [
  */
 module.exports = {
   name: "generator",
-  description: "generates a meme for the provided image",
+  description: "Generates a meme for the provided image",
   cooldown: 1,
   category: "IMAGE",
   botPermissions: ["EmbedLinks", "AttachFiles"],
@@ -49,20 +49,20 @@ module.exports = {
     options: [
       {
         name: "name",
-        description: "the type of generator",
+        description: "The type of generator",
         type: ApplicationCommandOptionType.String,
         required: true,
         choices: availableGenerators.map((gen) => ({ name: gen, value: gen })),
       },
       {
         name: "user",
-        description: "the user to whose avatar the generator needs to applied",
+        description: "The user to whose avatar the generator needs to applied",
         type: ApplicationCommandOptionType.User,
         required: false,
       },
       {
         name: "link",
-        description: "the image link to which the generator needs to applied",
+        description: "The image link to which the generator needs to applied",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

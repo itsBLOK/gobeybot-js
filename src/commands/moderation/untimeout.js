@@ -6,7 +6,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "untimeout",
-  description: "remove timeout from a member",
+  description: "Remove timeout from a member",
   category: "MODERATION",
   botPermissions: ["ModerateMembers"],
   userPermissions: ["ModerateMembers"],
@@ -21,13 +21,13 @@ module.exports = {
     options: [
       {
         name: "user",
-        description: "the target member",
+        description: "Target member",
         type: ApplicationCommandOptionType.User,
         required: true,
       },
       {
         name: "reason",
-        description: "reason for timeout",
+        description: "Reason for timeout",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

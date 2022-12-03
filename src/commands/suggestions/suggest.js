@@ -14,7 +14,7 @@ const { stripIndent } = require("common-tags");
  */
 module.exports = {
   name: "suggest",
-  description: "submit a suggestion",
+  description: "Submit a suggestion",
   category: "SUGGESTION",
   cooldown: 20,
   command: {
@@ -27,7 +27,7 @@ module.exports = {
     options: [
       {
         name: "suggestion",
-        description: "the suggestion",
+        description: "The suggestion",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

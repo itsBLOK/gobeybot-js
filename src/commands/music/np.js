@@ -8,7 +8,7 @@ const { splitBar } = require("string-progressbar");
  */
 module.exports = {
   name: "np",
-  description: "show's what track is currently being played",
+  description: "Show's what track is currently being played",
   category: "MUSIC",
   botPermissions: ["EmbedLinks"],
   command: {

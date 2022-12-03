@@ -10,7 +10,7 @@ const BASE_URL = "https://some-random-api.ml/animal";
  */
 module.exports = {
   name: "facts",
-  description: "shows a random animal facts",
+  description: "Shows a random animal facts",
   cooldown: 5,
   category: "FUN",
   botPermissions: ["EmbedLinks"],
@@ -25,7 +25,7 @@ module.exports = {
     options: [
       {
         name: "name",
-        description: "animal type",
+        description: "Animal type",
         type: ApplicationCommandOptionType.String,
         required: true,
         choices: animals.map((animal) => ({ name: animal, value: animal })),

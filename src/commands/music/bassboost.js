@@ -13,7 +13,7 @@ const levels = {
  */
 module.exports = {
   name: "bassboost",
-  description: "set bassboost level",
+  description: "Set bassboost level",
   category: "MUSIC",
   validations: musicValidations,
   command: {
@@ -26,7 +26,7 @@ module.exports = {
     options: [
       {
         name: "level",
-        description: "bassboost level",
+        description: "Bassboost level",
         type: ApplicationCommandOptionType.String,
         required: true,
         choices: [

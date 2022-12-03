@@ -2,7 +2,7 @@ const vmute = require("../shared/vmute");
 
 module.exports = {
   name: "vmute",
-  description: "mutes specified member's voice",
+  description: "Mutes specified member's voice",
   category: "MODERATION",
   userPermissions: ["MuteMembers"],
   botPermissions: ["MuteMembers"],

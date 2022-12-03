@@ -5,7 +5,7 @@ const deafen = require("../shared/deafen");
  */
 module.exports = {
   name: "deafen",
-  description: "deafen specified member in voice channels",
+  description: "Deafen specified member in voice channels",
   category: "MODERATION",
   userPermissions: ["DeafenMembers"],
   botPermissions: ["DeafenMembers"],

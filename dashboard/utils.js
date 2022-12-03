@@ -23,7 +23,7 @@ async function fetchUser(userData, client, query) {
         : `https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot+applications.commands&permissions=296150887519&guild_id=${guild.id}`;
       guild.iconURL = guild.icon
         ? `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=128`
-        : "https://discordemoji.com/assets/emoji/discordcry.png";
+        : "https://github.com/jtagt/mee6/blob/master/website/static/img/no_logo.png";
       guild.displayed = query ? guild.name.toLowerCase().includes(query.toLowerCase()) : true;
     });
     userData.displayedGuilds = userData.guilds.filter((g) => g.displayed && g.admin);

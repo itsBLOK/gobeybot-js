@@ -5,7 +5,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "anti",
-  description: "manage various automod settings for the server",
+  description: "Manage various automod settings for the server",
   category: "AUTOMOD",
   userPermissions: ["ManageGuild"],
   command: {
@@ -14,15 +14,15 @@ module.exports = {
     subcommands: [
       {
         trigger: "ghostping <on|off>",
-        description: "detect and logs ghost mentions in your server",
+        description: "Detect and Logs ghost mentions in your server",
       },
       {
         trigger: "spam <on|off>",
-        description: "enable or disable antispam detection",
+        description: "Enable or Disable antispam detection",
       },
       {
         trigger: "massmention <on|off> [threshold]",
-        description: "enable or disable massmention detection [default threshold is 3 mentions]",
+        description: "Enable or Disable massmention detection [default threshold is 3 mentions]",
       },
     ],
   },
@@ -32,12 +32,12 @@ module.exports = {
     options: [
       {
         name: "ghostping",
-        description: "detects and logs ghost mentions in your server",
+        description: "Detects and Logs ghost mentions in your server",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "configuration status",
+            description: "Configuration status",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -55,12 +55,12 @@ module.exports = {
       },
       {
         name: "spam",
-        description: "enable or disable antispam detection",
+        description: "Enable or Disable antispam detection",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "configuration status",
+            description: "Configuration status",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -78,12 +78,12 @@ module.exports = {
       },
       {
         name: "massmention",
-        description: "enable or disable massmention detection",
+        description: "Enable or Disable massmention detection",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "configuration status",
+            description: "Configuration status",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -99,7 +99,7 @@ module.exports = {
           },
           {
             name: "threshold",
-            description: "configuration threshold (default is 3 mentions)",
+            description: "Configuration threshold (default is 3 mentions)",
             required: false,
             type: ApplicationCommandOptionType.Integer,
           },

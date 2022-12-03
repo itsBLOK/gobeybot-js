@@ -5,7 +5,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "flagtranslation",
-  description: "configure flag translation in the server",
+  description: "Configure flag translation in the server",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   command: {
@@ -20,7 +20,7 @@ module.exports = {
     options: [
       {
         name: "status",
-        description: "enabled or disabled",
+        description: "Enabled or Disabled",
         required: true,
         type: ApplicationCommandOptionType.String,
         choices: [

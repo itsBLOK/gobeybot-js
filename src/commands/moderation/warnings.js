@@ -7,7 +7,7 @@ const { getMember } = require("@schemas/Member");
  */
 module.exports = {
   name: "warnings",
-  description: "list or clear user warnings",
+  description: "List or Clear user warnings",
   category: "MODERATION",
   userPermissions: ["KickMembers"],
   command: {
@@ -16,11 +16,11 @@ module.exports = {
     subcommands: [
       {
         trigger: "list [member]",
-        description: "list all warnings for a user",
+        description: "List all warnings for a user",
       },
       {
         trigger: "clear <member>",
-        description: "clear all warnings for a user",
+        description: "Clear all warnings for a user",
       },
     ],
   },
@@ -29,12 +29,12 @@ module.exports = {
     options: [
       {
         name: "list",
-        description: "list all warnings for a user",
+        description: "List all warnings for a user",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "the target member",
+            description: "Target member",
             type: ApplicationCommandOptionType.User,
             required: true,
           },
@@ -42,12 +42,12 @@ module.exports = {
       },
       {
         name: "clear",
-        description: "clear all warnings for a user",
+        description: "Clear all warnings for a user",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "the target member",
+            description: "Target member",
             type: ApplicationCommandOptionType.User,
             required: true,
           },

@@ -19,7 +19,7 @@ const availableOverlays = [
  */
 module.exports = {
   name: "overlay",
-  description: "add overlay over the provided image",
+  description: "Add overlay over the provided image",
   cooldown: 5,
   category: "IMAGE",
   botPermissions: ["EmbedLinks", "AttachFiles"],
@@ -32,20 +32,20 @@ module.exports = {
     options: [
       {
         name: "name",
-        description: "the type of overlay",
+        description: "The type of overlay",
         type: ApplicationCommandOptionType.String,
         required: true,
         choices: availableOverlays.map((overlay) => ({ name: overlay, value: overlay })),
       },
       {
         name: "user",
-        description: "the user to whose avatar the overlay needs to applied",
+        description: "The user to whose avatar the overlay needs to applied",
         type: ApplicationCommandOptionType.User,
         required: false,
       },
       {
         name: "link",
-        description: "the image link to which the overlay needs to applied",
+        description: "The image link to which the overlay needs to applied",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

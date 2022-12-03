@@ -9,7 +9,7 @@ const channelPerms = ["EmbedLinks", "ReadMessageHistory", "AddReactions", "UseEx
  */
 module.exports = {
   name: "addrr",
-  description: "setup reaction role for the specified message",
+  description: "Setup reaction role for the specified message",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   command: {
@@ -23,26 +23,26 @@ module.exports = {
     options: [
       {
         name: "channel",
-        description: "channel where the message exists",
+        description: "Channel where the message exists",
         type: ApplicationCommandOptionType.Channel,
         channelTypes: [ChannelType.GuildText],
         required: true,
       },
       {
         name: "message_id",
-        description: "message id to which reaction roles must be configured",
+        description: "Message id to which reaction roles must be configured",
         type: ApplicationCommandOptionType.String,
         required: true,
       },
       {
         name: "emoji",
-        description: "emoji to use",
+        description: "Emoji to use",
         type: ApplicationCommandOptionType.String,
         required: true,
       },
       {
         name: "role",
-        description: "role to be given for the selected emoji",
+        description: "Role to be given for the selected emoji",
         type: ApplicationCommandOptionType.Role,
         required: true,
       },

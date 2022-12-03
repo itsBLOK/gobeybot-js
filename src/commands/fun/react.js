@@ -11,7 +11,7 @@ const choices = ["hug", "kiss", "cuddle", "feed", "pat", "poke", "slap", "smug",
  */
 module.exports = {
   name: "react",
-  description: "anime reactions",
+  description: "Anime reactions",
   enabled: true,
   category: "FUN",
   cooldown: 5,
@@ -25,7 +25,7 @@ module.exports = {
     options: [
       {
         name: "category",
-        description: "reaction type",
+        description: "Reaction type",
         type: ApplicationCommandOptionType.String,
         required: true,
         choices: choices.map((ch) => ({ name: ch, value: ch })),

@@ -8,7 +8,7 @@ const { diffHours, getRemainingTime } = require("@helpers/Utils");
  */
 module.exports = {
   name: "daily",
-  description: "receive a daily bonus",
+  description: "Receive a daily bonus",
   category: "ECONOMY",
   botPermissions: ["EmbedLinks"],
   command: {

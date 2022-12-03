@@ -9,7 +9,7 @@ const API_KEY = process.env.WEATHERSTACK_KEY;
  */
 module.exports = {
   name: "weather",
-  description: "get weather information",
+  description: "Get weather information",
   cooldown: 5,
   category: "UTILITY",
   botPermissions: ["EmbedLinks"],
@@ -23,7 +23,7 @@ module.exports = {
     options: [
       {
         name: "place",
-        description: "country/city name to get weather information for",
+        description: "Country/city name to get weather information for",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

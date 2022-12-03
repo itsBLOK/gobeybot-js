@@ -5,7 +5,7 @@ const { ApplicationCommandOptionType, ChannelType } = require("discord.js");
  */
 module.exports = {
   name: "counter",
-  description: "setup counter channel in the guild",
+  description: "Setup counter channel in the guild",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   botPermissions: ["ManageChannels"],
@@ -20,7 +20,7 @@ module.exports = {
     options: [
       {
         name: "type",
-        description: "type of counter channel",
+        description: "Type of counter channel",
         type: ApplicationCommandOptionType.String,
         required: true,
         choices: [
@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         name: "name",
-        description: "name of the counter channel",
+        description: "Name of the counter channel",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

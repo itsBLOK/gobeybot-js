@@ -8,7 +8,7 @@ const { getMemberStats, getXpLb } = require("@schemas/MemberStats");
  */
 module.exports = {
   name: "rank",
-  description: "displays members rank in this server",
+  description: "Gives you your xp, level and rank.",
   cooldown: 5,
   category: "STATS",
   botPermissions: ["AttachFiles"],
@@ -21,7 +21,7 @@ module.exports = {
     options: [
       {
         name: "user",
-        description: "target user",
+        description: "Target user",
         type: ApplicationCommandOptionType.User,
         required: false,
       },

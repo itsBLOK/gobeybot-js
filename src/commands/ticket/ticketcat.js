@@ -6,7 +6,7 @@ const { EMBED_COLORS } = require("@root/config.js");
  */
 module.exports = {
   name: "ticketcat",
-  description: "manage ticket categories",
+  description: "Manage ticket categories",
   category: "TICKET",
   userPermissions: ["ManageGuild"],
   command: {
@@ -15,15 +15,15 @@ module.exports = {
     subcommands: [
       {
         trigger: "list",
-        description: "list all ticket categories",
+        description: "List all ticket categories",
       },
       {
         trigger: "add <category> | <staff_roles>",
-        description: "add a ticket category",
+        description: "Add a ticket category",
       },
       {
         trigger: "remove <category>",
-        description: "remove a ticket category",
+        description: "Remove a ticket category",
       },
     ],
   },
@@ -33,23 +33,23 @@ module.exports = {
     options: [
       {
         name: "list",
-        description: "list all ticket categories",
+        description: "List all ticket categories",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "add",
-        description: "add a ticket category",
+        description: "Add a ticket category",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "category",
-            description: "the category name",
+            description: "The category name",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
           {
             name: "staff_roles",
-            description: "the staff roles",
+            description: "The staff roles",
             type: ApplicationCommandOptionType.String,
             required: false,
           },
@@ -57,12 +57,12 @@ module.exports = {
       },
       {
         name: "remove",
-        description: "remove a ticket category",
+        description: "Remove a ticket category",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "category",
-            description: "the category name",
+            description: "The category name",
             type: ApplicationCommandOptionType.String,
             required: true,
           },

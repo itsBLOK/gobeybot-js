@@ -7,7 +7,7 @@ const { EMBED_COLORS, ECONOMY } = require("@root/config.js");
  */
 module.exports = {
   name: "beg",
-  description: "beg from someone",
+  description: "Beg from someone",
   category: "ECONOMY",
   cooldown: 21600,
   botPermissions: ["EmbedLinks"],
@@ -35,6 +35,7 @@ async function beg(user) {
     "T-Series",
     "Sans",
     "RLX",
+    "BLOK",
     "Pro Gamer 711",
     "Zenitsu",
     "Jake Paul",

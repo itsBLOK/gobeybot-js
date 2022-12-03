@@ -21,13 +21,13 @@ module.exports = {
     options: [
       {
         name: "title",
-        description: "title for your content",
+        description: "Title for your content",
         required: true,
         type: ApplicationCommandOptionType.String,
       },
       {
         name: "content",
-        description: "content to be posted to bin",
+        description: "Content to be posted to bin",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

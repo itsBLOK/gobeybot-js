@@ -9,7 +9,7 @@ const FLIPPED = "∀qϽᗡƎℲƃHIſʞ˥WNOԀὉᴚS⊥∩ΛMXʎZɐqɔpǝɟbɥ�
  */
 module.exports = {
   name: "flip",
-  description: "flips a coin or message",
+  description: "Flips a coin or message",
   category: "FUN",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -18,11 +18,11 @@ module.exports = {
     subcommands: [
       {
         trigger: "coin",
-        description: "flips a coin heads or tails",
+        description: "Flips a coin heads or tails",
       },
       {
         trigger: "text <input>",
-        description: "reverses the given message",
+        description: "Reverses the given message",
       },
     ],
   },
@@ -31,17 +31,17 @@ module.exports = {
     options: [
       {
         name: "coin",
-        description: "flip a coin",
+        description: "Flip a coin",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "text",
-        description: "reverses the given message",
+        description: "Reverses the given message",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "input",
-            description: "text to flip",
+            description: "Text to flip",
             type: ApplicationCommandOptionType.String,
             required: true,
           },

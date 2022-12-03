@@ -11,7 +11,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "info",
-  description: "show various information",
+  description: "Show various information",
   category: "INFORMATION",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -22,12 +22,12 @@ module.exports = {
     options: [
       {
         name: "user",
-        description: "get user information",
+        description: "Get user information",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "name",
-            description: "name of the user",
+            description: "Name of the user",
             type: ApplicationCommandOptionType.User,
             required: false,
           },
@@ -35,12 +35,12 @@ module.exports = {
       },
       {
         name: "channel",
-        description: "get channel information",
+        description: "Get channel information",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "name",
-            description: "name of the channel",
+            description: "Name of the channel",
             type: ApplicationCommandOptionType.Channel,
             required: false,
           },
@@ -48,22 +48,22 @@ module.exports = {
       },
       {
         name: "guild",
-        description: "get guild information",
+        description: "Get guild information",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "bot",
-        description: "get bot information",
+        description: "Get bot information",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "avatar",
-        description: "displays avatar information",
+        description: "Displays avatar information",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "name",
-            description: "name of the user",
+            description: "Name of the user",
             type: ApplicationCommandOptionType.User,
             required: false,
           },
@@ -71,12 +71,12 @@ module.exports = {
       },
       {
         name: "emoji",
-        description: "displays emoji information",
+        description: "Displays emoji information",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "name",
-            description: "name of the emoji",
+            description: "Name of the emoji",
             type: ApplicationCommandOptionType.String,
             required: true,
           },

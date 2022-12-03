@@ -14,7 +14,7 @@ const { getRandomInt } = require("@helpers/Utils");
  */
 module.exports = {
   name: "meme",
-  description: "get a random meme",
+  description: "Get a random meme",
   category: "FUN",
   botPermissions: ["EmbedLinks"],
   cooldown: 20,
@@ -27,7 +27,7 @@ module.exports = {
     options: [
       {
         name: "category",
-        description: "meme category",
+        description: "Meme category",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

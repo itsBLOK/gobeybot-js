@@ -8,7 +8,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "seek",
-  description: "sets the playing track's position to the specified position",
+  description: "Sets the playing track's position to the specified position",
   category: "MUSIC",
   validations: musicValidations,
   command: {

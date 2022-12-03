@@ -9,7 +9,7 @@ const BASE_URL = "https://some-random-api.ml/lyrics";
  */
 module.exports = {
     name: "lyric",
-    description: "find lyric of the song",
+    description: "Find lyric of the song",
     category: "MUSIC",
     botPermissions: ["EmbedLinks"],
     command: {
@@ -23,7 +23,7 @@ module.exports = {
             {
                 name: "query",
                 type: ApplicationCommandOptionType.String,
-                description: "find lyric of the song",
+                description: "Find lyric of the song",
                 required: true,
             },
         ],

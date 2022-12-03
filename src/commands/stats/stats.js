@@ -8,7 +8,7 @@ const { stripIndents } = require("common-tags");
  */
 module.exports = {
   name: "stats",
-  description: "displays members stats in this server",
+  description: "Displays members stats in this server",
   cooldown: 5,
   category: "STATS",
   command: {
@@ -20,7 +20,7 @@ module.exports = {
     options: [
       {
         name: "user",
-        description: "target user",
+        description: "Target user",
         type: ApplicationCommandOptionType.User,
         required: false,
       },

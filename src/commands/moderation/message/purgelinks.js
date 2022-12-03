@@ -5,7 +5,7 @@ const { purgeMessages } = require("@helpers/ModUtils");
  */
 module.exports = {
   name: "purgelinks",
-  description: "deletes the specified amount of messages with links",
+  description: "Deletes the specified amount of messages with links",
   category: "MODERATION",
   userPermissions: ["ManageMessages"],
   botPermissions: ["ManageMessages", "ReadMessageHistory"],

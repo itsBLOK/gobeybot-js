@@ -5,7 +5,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "autorole",
-  description: "setup role to be given when a member joins the server",
+  description: "Setup role to be given when a member joins the server",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   command: {
@@ -19,18 +19,18 @@ module.exports = {
     options: [
       {
         name: "add",
-        description: "setup the autorole",
+        description: "Setup the autorole",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "role",
-            description: "the role to be given",
+            description: "The role to be given",
             type: ApplicationCommandOptionType.Role,
             required: false,
           },
           {
             name: "role_id",
-            description: "the role id to be given",
+            description: "The role id to be given",
             type: ApplicationCommandOptionType.String,
             required: false,
           },
@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         name: "remove",
-        description: "disable the autorole",
+        description: "Disable the autorole",
         type: ApplicationCommandOptionType.Subcommand,
       },
     ],

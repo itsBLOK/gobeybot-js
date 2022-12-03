@@ -5,7 +5,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "autodelete",
-  description: "manage the autodelete settings for the server",
+  description: "Manage the autodelete settings for the server",
   category: "AUTOMOD",
   userPermissions: ["ManageGuild"],
   command: {
@@ -14,19 +14,19 @@ module.exports = {
     subcommands: [
       {
         trigger: "attachments <on|off>",
-        description: "allow or disallow attachments in message",
+        description: "Allow or Disallow attachments in message",
       },
       {
         trigger: "invites <on|off>",
-        description: "allow or disallow invites in message",
+        description: "Allow or Disallow invites in message",
       },
       {
         trigger: "links <on|off>",
-        description: "allow or disallow links in message",
+        description: "Allow or Disallow links in message",
       },
       {
         trigger: "maxlines <number>",
-        description: "sets maximum lines allowed per message [0 to disable]",
+        description: "Sets maximum lines allowed per message [0 to disable]",
       },
     ],
   },
@@ -36,12 +36,12 @@ module.exports = {
     options: [
       {
         name: "attachments",
-        description: "allow or disallow attachments in message",
+        description: "Allow or Disallow attachments in message",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "configuration status",
+            description: "Configuration status",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -59,12 +59,12 @@ module.exports = {
       },
       {
         name: "invites",
-        description: "allow or disallow discord invites in message",
+        description: "Allow or Disallow discord invites in message",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "configuration status",
+            description: "Configuration status",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -82,12 +82,12 @@ module.exports = {
       },
       {
         name: "links",
-        description: "allow or disallow links in message",
+        description: "Allow or Disallow links in message",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "status",
-            description: "configuration status",
+            description: "Configuration status",
             required: true,
             type: ApplicationCommandOptionType.String,
             choices: [
@@ -105,12 +105,12 @@ module.exports = {
       },
       {
         name: "maxlines",
-        description: "sets maximum lines allowed per message",
+        description: "Sets maximum lines allowed per message",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "amount",
-            description: "configuration amount (0 to disable)",
+            description: "Configuration amount (0 to disable)",
             required: true,
             type: ApplicationCommandOptionType.Integer,
           },

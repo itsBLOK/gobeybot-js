@@ -18,7 +18,7 @@ const { isTicketChannel, closeTicket, closeAllTickets } = require("@handlers/tic
  */
 module.exports = {
   name: "ticket",
-  description: "various ticketing commands",
+  description: "Various ticketing commands",
   category: "TICKET",
   userPermissions: ["ManageGuild"],
   command: {
@@ -27,31 +27,31 @@ module.exports = {
     subcommands: [
       {
         trigger: "setup <#channel>",
-        description: "start an interactive ticket setup",
+        description: "Start an interactive ticket setup",
       },
       {
         trigger: "log <#channel>",
-        description: "setup log channel for tickets",
+        description: "Setup log channel for tickets",
       },
       {
         trigger: "limit <number>",
-        description: "set maximum number of concurrent open tickets",
+        description: "Set maximum number of concurrent open tickets",
       },
       {
         trigger: "close",
-        description: "close the ticket",
+        description: "Close the ticket",
       },
       {
         trigger: "closeall",
-        description: "close all open tickets",
+        description: "Close all open tickets",
       },
       {
         trigger: "add <userId|roleId>",
-        description: "add user/role to the ticket",
+        description: "Add user/role to the ticket",
       },
       {
         trigger: "remove <userId|roleId>",
-        description: "remove user/role from the ticket",
+        description: "Remove user/role from the ticket",
       },
     ],
   },
@@ -60,12 +60,12 @@ module.exports = {
     options: [
       {
         name: "setup",
-        description: "setup a new ticket message",
+        description: "Setup a new ticket message",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "the channel where ticket creation message must be sent",
+            description: "The channel where ticket creation message must be sent",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
@@ -74,12 +74,12 @@ module.exports = {
       },
       {
         name: "log",
-        description: "setup log channel for tickets",
+        description: "Setup log channel for tickets",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel where ticket logs must be sent",
+            description: "Channel where ticket logs must be sent",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
@@ -88,12 +88,12 @@ module.exports = {
       },
       {
         name: "limit",
-        description: "set maximum number of concurrent open tickets",
+        description: "Set maximum number of concurrent open tickets",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "amount",
-            description: "max number of tickets",
+            description: "Max number of tickets",
             type: ApplicationCommandOptionType.Integer,
             required: true,
           },
@@ -101,22 +101,22 @@ module.exports = {
       },
       {
         name: "close",
-        description: "closes the ticket [used in ticket channel only]",
+        description: "Closes the ticket [used in ticket channel only]",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "closeall",
-        description: "closes all open tickets",
+        description: "Closes all open tickets",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "add",
-        description: "add user to the current ticket channel [used in ticket channel only]",
+        description: "Add user to the current ticket channel [used in ticket channel only]",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user_id",
-            description: "the id of the user to add",
+            description: "The id of the user to add",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -124,12 +124,12 @@ module.exports = {
       },
       {
         name: "remove",
-        description: "remove user from the ticket channel [used in ticket channel only]",
+        description: "Remove user from the ticket channel [used in ticket channel only]",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "the user to remove",
+            description: "The user to remove",
             type: ApplicationCommandOptionType.User,
             required: true,
           },

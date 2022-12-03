@@ -6,7 +6,7 @@ const { EmbedBuilder, ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "queue",
-  description: "displays the current music queue",
+  description: "Displays the current music queue",
   category: "MUSIC",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -18,7 +18,7 @@ module.exports = {
     options: [
       {
         name: "page",
-        description: "page number",
+        description: "Page number",
         type: ApplicationCommandOptionType.Integer,
         required: false,
       },

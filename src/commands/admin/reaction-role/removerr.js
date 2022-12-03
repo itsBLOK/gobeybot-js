@@ -9,7 +9,7 @@ const channelPerms = ["EmbedLinks", "ReadMessageHistory", "AddReactions", "UseEx
  */
 module.exports = {
   name: "removerr",
-  description: "remove configured reaction for the specified message",
+  description: "Remove configured reaction for the specified message",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   command: {
@@ -23,14 +23,14 @@ module.exports = {
     options: [
       {
         name: "channel",
-        description: "channel where the message exists",
+        description: "Channel where the message exists",
         type: ApplicationCommandOptionType.Channel,
         channelTypes: [ChannelType.GuildText],
         required: true,
       },
       {
         name: "message_id",
-        description: "message id for which reaction roles was configured",
+        description: "Message id for which reaction roles was configured",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

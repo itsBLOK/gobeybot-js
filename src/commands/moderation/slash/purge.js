@@ -6,7 +6,7 @@ const { ApplicationCommandOptionType, ChannelType } = require("discord.js");
  */
 module.exports = {
   name: "purge",
-  description: "purge commands",
+  description: "Purge commands",
   category: "MODERATION",
   userPermissions: ["ManageMessages"],
   command: {
@@ -18,19 +18,19 @@ module.exports = {
     options: [
       {
         name: "all",
-        description: "purge all messages",
+        description: "Purge all messages",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel from which messages must be cleaned",
+            description: "Channel from which messages must be cleaned",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
           },
           {
             name: "amount",
-            description: "number of messages to be deleted (Max 99)",
+            description: "Number of messages to be deleted (Max 99)",
             type: ApplicationCommandOptionType.Integer,
             required: false,
           },
@@ -38,19 +38,19 @@ module.exports = {
       },
       {
         name: "attachments",
-        description: "purge all messages with attachments",
+        description: "Purge all messages with attachments",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel from which messages must be cleaned",
+            description: "Channel from which messages must be cleaned",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
           },
           {
             name: "amount",
-            description: "number of messages to be deleted (Max 99)",
+            description: "Number of messages to be deleted (Max 99)",
             type: ApplicationCommandOptionType.Integer,
             required: false,
           },
@@ -58,19 +58,19 @@ module.exports = {
       },
       {
         name: "bots",
-        description: "purge all bot messages",
+        description: "Purge all bot messages",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel from which messages must be cleaned",
+            description: "Channel from which messages must be cleaned",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
           },
           {
             name: "amount",
-            description: "number of messages to be deleted (Max 99)",
+            description: "Number of messages to be deleted (Max 99)",
             type: ApplicationCommandOptionType.Integer,
             required: false,
           },
@@ -78,19 +78,19 @@ module.exports = {
       },
       {
         name: "links",
-        description: "purge all messages with links",
+        description: "Purge all messages with links",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel from which messages must be cleaned",
+            description: "Channel from which messages must be cleaned",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
           },
           {
             name: "amount",
-            description: "number of messages to be deleted (Max 99)",
+            description: "Number of messages to be deleted (Max 99)",
             type: ApplicationCommandOptionType.Integer,
             required: false,
           },
@@ -98,25 +98,25 @@ module.exports = {
       },
       {
         name: "token",
-        description: "purge all messages containing the specified token",
+        description: "Purge all messages containing the specified token",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel from which messages must be cleaned",
+            description: "Channel from which messages must be cleaned",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
           },
           {
             name: "token",
-            description: "token to be looked up in messages",
+            description: "Token to be looked up in messages",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
           {
             name: "amount",
-            description: "number of messages to be deleted (Max 99)",
+            description: "Number of messages to be deleted (Max 99)",
             type: ApplicationCommandOptionType.Integer,
             required: false,
           },
@@ -124,25 +124,25 @@ module.exports = {
       },
       {
         name: "user",
-        description: "purge all messages from the specified user",
+        description: "Purge all messages from the specified user",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel from which messages must be cleaned",
+            description: "Channel from which messages must be cleaned",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
           },
           {
             name: "user",
-            description: "user whose messages needs to be cleaned",
+            description: "User whose messages needs to be cleaned",
             type: ApplicationCommandOptionType.User,
             required: true,
           },
           {
             name: "amount",
-            description: "number of messages to be deleted (Max 99)",
+            description: "Number of messages to be deleted (Max 99)",
             type: ApplicationCommandOptionType.Integer,
             required: false,
           },

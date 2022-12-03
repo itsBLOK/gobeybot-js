@@ -14,7 +14,7 @@ const search_prefix = {
  */
 module.exports = {
   name: "play",
-  description: "play a song",
+  description: "Play a song",
   category: "MUSIC",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -27,7 +27,7 @@ module.exports = {
     options: [
       {
         name: "query",
-        description: "song name or url",
+        description: "Song name or url",
         type: ApplicationCommandOptionType.String,
         required: true,
       },
@@ -71,7 +71,7 @@ async function play({ member, guild, channel }, query) {
   try {
     if (guild.client.musicManager.spotify.isSpotifyUrl(query)) {
       if (!process.env.SPOTIFY_CLIENT_ID || !process.env.SPOTIFY_CLIENT_SECRET) {
-        return "🚫 Spotify songs cannot be played. Please contact the bot owner";
+        return "🚫 Spotify songs cannot be played. Please contact the support";
       }
 
       const item = await guild.client.musicManager.spotify.load(query);

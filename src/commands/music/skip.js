@@ -5,7 +5,7 @@ const { musicValidations } = require("@helpers/BotUtils");
  */
 module.exports = {
   name: "skip",
-  description: "skip the current song",
+  description: "Skip the current song",
   category: "MUSIC",
   validations: musicValidations,
   command: {

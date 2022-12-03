@@ -8,7 +8,7 @@ const moment = require("moment");
  */
 module.exports = {
   name: "urban",
-  description: "searches the urban dictionary",
+  description: "Searches the urban dictionary",
   cooldown: 5,
   category: "UTILITY",
   botPermissions: ["EmbedLinks"],
@@ -22,7 +22,7 @@ module.exports = {
     options: [
       {
         name: "word",
-        description: "the word for which you want to urban meaning",
+        description: "The word for which you want to urban meaning",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

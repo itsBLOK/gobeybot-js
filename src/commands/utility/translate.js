@@ -13,7 +13,7 @@ const choices = ["ar", "cs", "de", "en", "fa", "fr", "hi", "hr", "it", "ja", "ko
  */
 module.exports = {
   name: "translate",
-  description: "translate from one language to other",
+  description: "Translate from one language to other",
   cooldown: 20,
   category: "UTILITY",
   botPermissions: ["EmbedLinks"],
@@ -28,14 +28,14 @@ module.exports = {
     options: [
       {
         name: "language",
-        description: "translation language",
+        description: "Translation language",
         type: ApplicationCommandOptionType.String,
         required: true,
         choices: choices.map((choice) => ({ name: GOOGLE_TRANSLATE[choice], value: choice })),
       },
       {
         name: "text",
-        description: "the text that requires translation",
+        description: "The text that requires translation",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

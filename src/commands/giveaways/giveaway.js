@@ -26,7 +26,7 @@ const edit = require("./sub/edit");
  */
 module.exports = {
   name: "giveaway",
-  description: "giveaway commands",
+  description: "Giveaway commands",
   category: "GIVEAWAY",
   command: {
     enabled: true,
@@ -34,31 +34,31 @@ module.exports = {
     subcommands: [
       {
         trigger: "start <#channel>",
-        description: "setup a new giveaway",
+        description: "Setup a new giveaway",
       },
       {
         trigger: "pause <messageId>",
-        description: "pause a giveaway",
+        description: "Pause a giveaway",
       },
       {
         trigger: "resume <messageId>",
-        description: "resume a paused giveaway",
+        description: "Resume a paused giveaway",
       },
       {
         trigger: "end <messageId>",
-        description: "end a giveaway",
+        description: "End a giveaway",
       },
       {
         trigger: "reroll <messageId>",
-        description: "reroll a giveaway",
+        description: "Reroll a giveaway",
       },
       {
         trigger: "list",
-        description: "list all giveaways",
+        description: "List all giveaways",
       },
       {
         trigger: "edit <messageId>",
-        description: "edit a giveaway",
+        description: "Edit a giveaway",
       },
     ],
   },
@@ -68,12 +68,12 @@ module.exports = {
     options: [
       {
         name: "start",
-        description: "start a giveaway",
+        description: "Start a giveaway",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "the channel to start the giveaway in",
+            description: "The channel to start the giveaway in",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,
@@ -82,12 +82,12 @@ module.exports = {
       },
       {
         name: "pause",
-        description: "pause a giveaway",
+        description: "Pause a giveaway",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "message_id",
-            description: "the message id of the giveaway",
+            description: "The message id of the giveaway",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -95,12 +95,12 @@ module.exports = {
       },
       {
         name: "resume",
-        description: "resume a paused giveaway",
+        description: "Resume a paused giveaway",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "message_id",
-            description: "the message id of the giveaway",
+            description: "The message id of the giveaway",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -108,12 +108,12 @@ module.exports = {
       },
       {
         name: "end",
-        description: "end a giveaway",
+        description: "End a giveaway",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "message_id",
-            description: "the message id of the giveaway",
+            description: "The message id of the giveaway",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -121,12 +121,12 @@ module.exports = {
       },
       {
         name: "reroll",
-        description: "reroll a giveaway",
+        description: "Reroll a giveaway",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "message_id",
-            description: "the message id of the giveaway",
+            description: "The message id of the giveaway",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -134,35 +134,35 @@ module.exports = {
       },
       {
         name: "list",
-        description: "list all giveaways",
+        description: "List all giveaways",
         type: ApplicationCommandOptionType.Subcommand,
       },
       {
         name: "edit",
-        description: "edit a giveaway",
+        description: "Edit a giveaway",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "message_id",
-            description: "the message id of the giveaway",
+            description: "The message id of the giveaway",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
           {
             name: "add_duration",
-            description: "the number of minutes to add to the giveaway duration",
+            description: "The number of minutes to add to the giveaway duration",
             type: ApplicationCommandOptionType.Integer,
             required: false,
           },
           {
             name: "new_prize",
-            description: "the new prize",
+            description: "The new prize",
             type: ApplicationCommandOptionType.String,
             required: false,
           },
           {
             name: "new_winners",
-            description: "the new number of winners",
+            description: "The new number of winners",
             type: ApplicationCommandOptionType.Integer,
             required: false,
           },

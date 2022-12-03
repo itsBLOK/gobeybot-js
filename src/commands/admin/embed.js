@@ -16,7 +16,7 @@ const {
  */
 module.exports = {
   name: "embed",
-  description: "send embed message",
+  description: "Send embed message",
   category: "ADMIN",
   userPermissions: ["ManageMessages"],
   command: {
@@ -31,7 +31,7 @@ module.exports = {
     options: [
       {
         name: "channel",
-        description: "channel to send embed",
+        description: "Channel to send embed",
         type: ApplicationCommandOptionType.Channel,
         channelTypes: [ChannelType.GuildText],
         required: true,

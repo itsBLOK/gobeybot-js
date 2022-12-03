@@ -30,7 +30,7 @@ const discordTogether = [
  */
 module.exports = {
   name: "together",
-  description: "discord together",
+  description: "Discord together",
   category: "FUN",
   botPermissions: ["EmbedLinks"],
   command: {

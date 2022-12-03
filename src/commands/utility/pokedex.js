@@ -8,7 +8,7 @@ const { stripIndent } = require("common-tags");
  */
 module.exports = {
   name: "pokedex",
-  description: "shows pokemon information",
+  description: "Shows pokemon information",
   category: "FUN",
   botPermissions: ["EmbedLinks"],
   cooldown: 5,
@@ -22,7 +22,7 @@ module.exports = {
     options: [
       {
         name: "pokemon",
-        description: "pokemon name to get information for",
+        description: "Pokemon name to get information for",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

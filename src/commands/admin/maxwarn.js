@@ -5,7 +5,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "maxwarn",
-  description: "set max warnings configuration",
+  description: "Set max warnings configuration",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   command: {
@@ -14,11 +14,11 @@ module.exports = {
     subcommands: [
       {
         trigger: "limit <number>",
-        description: "set max warnings a member can receive before taking an action",
+        description: "Set max warnings a member can receive before taking an action",
       },
       {
         trigger: "action <timeout|kick|ban>",
-        description: "set action to performed after receiving maximum warnings",
+        description: "Set action to performed after receiving maximum warnings",
       },
     ],
   },
@@ -28,12 +28,12 @@ module.exports = {
     options: [
       {
         name: "limit",
-        description: "set max warnings a member can receive before taking an action",
+        description: "Set max warnings a member can receive before taking an action",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "amount",
-            description: "max number of strikes",
+            description: "Max number of strikes",
             type: ApplicationCommandOptionType.Integer,
             required: true,
           },
@@ -41,12 +41,12 @@ module.exports = {
       },
       {
         name: "action",
-        description: "set action to performed after receiving maximum warnings",
+        description: "Set action to performed after receiving maximum warnings",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "action",
-            description: "action to perform",
+            description: "Action to perform",
             type: ApplicationCommandOptionType.String,
             required: true,
             choices: [

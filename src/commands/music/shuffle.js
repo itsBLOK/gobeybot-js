@@ -5,7 +5,7 @@ const { musicValidations } = require("@helpers/BotUtils");
  */
 module.exports = {
   name: "shuffle",
-  description: "shuffle the queue",
+  description: "Shuffle the queue",
   category: "MUSIC",
   validations: musicValidations,
   command: {

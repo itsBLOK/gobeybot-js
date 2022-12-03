@@ -5,7 +5,7 @@ const { ApplicationCommandOptionType, ChannelType } = require("discord.js");
  */
 module.exports = {
   name: "modlog",
-  description: "enable or disable moderation logs",
+  description: "Enable or Disable moderation logs",
   category: "ADMIN",
   userPermissions: ["ManageGuild"],
   command: {
@@ -19,7 +19,7 @@ module.exports = {
     options: [
       {
         name: "channel",
-        description: "channels to send mod logs",
+        description: "Channels to send mod logs",
         required: false,
         type: ApplicationCommandOptionType.Channel,
         channelTypes: [ChannelType.GuildText],

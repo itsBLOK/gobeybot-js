@@ -46,7 +46,7 @@ function sendWebhook(content, err, client) {
     );
 
   embed.addFields({ name: "Description", value: content || err?.message || "NA" });
-  webhookLogger.send({ username: "Gobey Bot", avatarURL: client.user.displayAvatarURL(), embeds: [embed] }).catch((ex) => {});
+  webhookLogger.send({ username: "Gobey Bot", embeds: [embed] }).catch((ex) => {});
 }
 
 module.exports = class Logger {

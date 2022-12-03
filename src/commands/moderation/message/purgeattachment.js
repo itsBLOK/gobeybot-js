@@ -5,7 +5,7 @@ const { purgeMessages } = require("@helpers/ModUtils");
  */
 module.exports = {
   name: "purgeattach",
-  description: "deletes the specified amount of messages with attachments",
+  description: "Deletes the specified amount of messages with attachments",
   category: "MODERATION",
   userPermissions: ["ManageMessages"],
   botPermissions: ["ManageMessages", "ReadMessageHistory"],

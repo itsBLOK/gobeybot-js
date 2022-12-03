@@ -5,7 +5,7 @@ const { ApplicationCommandOptionType, ChannelType } = require("discord.js");
  */
 module.exports = {
   name: "levelup",
-  description: "configure the levelling system",
+  description: "Configure the levelling system",
   category: "STATS",
   userPermissions: ["ManageGuild"],
   command: {
@@ -14,11 +14,11 @@ module.exports = {
     subcommands: [
       {
         trigger: "message <new-message>",
-        description: "set custom level up message",
+        description: "Set custom level up message",
       },
       {
         trigger: "channel <#channel|off>",
-        description: "set the channel to send level up messages to",
+        description: "Set the channel to send level up messages to",
       },
     ],
   },
@@ -27,12 +27,12 @@ module.exports = {
     options: [
       {
         name: "message",
-        description: "set custom level up message",
+        description: "Set custom level up message",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "message",
-            description: "message to display when a user levels up",
+            description: "Message to display when a user levels up",
             type: ApplicationCommandOptionType.String,
             required: true,
           },
@@ -40,12 +40,12 @@ module.exports = {
       },
       {
         name: "channel",
-        description: "set the channel to send level up messages to",
+        description: "Set the channel to send level up messages to",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "channel",
-            description: "channel to send level up messages to",
+            description: "Channel to send level up messages to",
             type: ApplicationCommandOptionType.Channel,
             channelTypes: [ChannelType.GuildText],
             required: true,

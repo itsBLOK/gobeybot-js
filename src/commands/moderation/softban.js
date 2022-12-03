@@ -6,7 +6,7 @@ const { ApplicationCommandOptionType } = require("discord.js");
  */
 module.exports = {
   name: "softban",
-  description: "softban the specified member. Kicks and deletes messages",
+  description: "Softban the specified member. Kicks and deletes messages",
   category: "MODERATION",
   botPermissions: ["BanMembers"],
   userPermissions: ["KickMembers"],
@@ -20,13 +20,13 @@ module.exports = {
     options: [
       {
         name: "user",
-        description: "the target member",
+        description: "The target member",
         type: ApplicationCommandOptionType.User,
         required: true,
       },
       {
         name: "reason",
-        description: "reason for softban",
+        description: "Reason for softban",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

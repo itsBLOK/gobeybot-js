@@ -7,7 +7,7 @@ const { parse } = require("twemoji-parser");
  */
 module.exports = {
   name: "bigemoji",
-  description: "enlarge an emoji",
+  description: "Enlarge an emoji",
   category: "UTILITY",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -21,7 +21,7 @@ module.exports = {
     options: [
       {
         name: "emoji",
-        description: "emoji to enlarge",
+        description: "Emoji to enlarge",
         type: ApplicationCommandOptionType.String,
         required: true,
       },

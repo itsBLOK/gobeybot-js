@@ -5,7 +5,7 @@ const vunmute = require("../shared/vunmute");
  */
 module.exports = {
   name: "vunmute",
-  description: "unmutes specified member's voice",
+  description: "Unmutes specified member's voice",
   category: "MODERATION",
   userPermissions: ["MuteMembers"],
   botPermissions: ["MuteMembers"],

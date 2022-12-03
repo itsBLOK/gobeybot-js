@@ -7,7 +7,7 @@ const ems = require("enhanced-ms");
  */
 module.exports = {
   name: "timeout",
-  description: "timeouts the specified member",
+  description: "Timeouts the specified member",
   category: "MODERATION",
   botPermissions: ["ModerateMembers"],
   userPermissions: ["ModerateMembers"],
@@ -22,19 +22,19 @@ module.exports = {
     options: [
       {
         name: "user",
-        description: "the target member",
+        description: "Target member",
         type: ApplicationCommandOptionType.User,
         required: true,
       },
       {
         name: "duration",
-        description: "the time to timeout the member for",
+        description: "Time to timeout the member for",
         type: ApplicationCommandOptionType.String,
         required: true,
       },
       {
         name: "reason",
-        description: "reason for timeout",
+        description: "Reason for timeout",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

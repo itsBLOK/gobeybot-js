@@ -8,7 +8,7 @@ const { EMBED_COLORS } = require("@root/config");
  */
 module.exports = {
   name: "rep",
-  description: "give reputation to a user",
+  description: "Give reputation to a user",
   category: "SOCIAL",
   botPermissions: ["EmbedLinks"],
   command: {
@@ -18,11 +18,11 @@ module.exports = {
     subcommands: [
       {
         trigger: "view [user]",
-        description: "view reputation for a user",
+        description: "View reputation for a user",
       },
       {
         trigger: "give [user]",
-        description: "give reputation to a user",
+        description: "Give reputation to a user",
       },
     ],
   },
@@ -31,12 +31,12 @@ module.exports = {
     options: [
       {
         name: "view",
-        description: "view reputation for a user",
+        description: "View reputation for a user",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "the user to check reputation for",
+            description: "The user to check reputation for",
             type: ApplicationCommandOptionType.User,
             required: false,
           },
@@ -44,12 +44,12 @@ module.exports = {
       },
       {
         name: "give",
-        description: "give reputation to a user",
+        description: "Give reputation to a user",
         type: ApplicationCommandOptionType.Subcommand,
         options: [
           {
             name: "user",
-            description: "the user to check reputation for",
+            description: "The user to check reputation for",
             type: ApplicationCommandOptionType.User,
             required: true,
           },

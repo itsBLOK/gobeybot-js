@@ -43,7 +43,7 @@ const additionalParams = {
  */
 module.exports = {
   name: "filter",
-  description: "add filter to the provided image",
+  description: "Add filter to the provided image",
   cooldown: 5,
   category: "IMAGE",
   botPermissions: ["EmbedLinks", "AttachFiles"],
@@ -56,20 +56,20 @@ module.exports = {
     options: [
       {
         name: "name",
-        description: "the type of filter",
+        description: "The type of filter",
         type: ApplicationCommandOptionType.String,
         required: true,
         choices: availableFilters.map((filter) => ({ name: filter, value: filter })),
       },
       {
         name: "user",
-        description: "the user to whose avatar the filter needs to applied",
+        description: "The user to whose avatar the filter needs to applied",
         type: ApplicationCommandOptionType.User,
         required: false,
       },
       {
         name: "link",
-        description: "the image link to which the filter needs to applied",
+        description: "The image link to which the filter needs to applied",
         type: ApplicationCommandOptionType.String,
         required: false,
       },

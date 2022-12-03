@@ -5,7 +5,7 @@ const disconnect = require("../shared/disconnect");
  */
 module.exports = {
   name: "disconnect",
-  description: "disconnect specified member from voice channel",
+  description: "Disconnect specified member from voice channel",
   category: "MODERATION",
   userPermissions: ["MuteMembers"],
   command: {
