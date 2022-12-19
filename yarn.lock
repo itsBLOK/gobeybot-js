@@ -1468,7 +1468,7 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-enhanced-ms@^2.1.1:
+enhanced-ms@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/enhanced-ms/-/enhanced-ms-2.2.0.tgz#6c6fbcc0d1efdda36b134f813603c2c5cd9f15fe"
   integrity sha512-X1ZgAp1HsV/vlZ3KPkWjJHJV9aPDXOXO6may+H7zW1EaQXum4wfIQrJdcjyqeLR9Lkffqr4VlsfmQcMqRPmg1g==
@@ -2314,10 +2314,10 @@ node-gyp-build@^4.3.0:
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.5.0.tgz#7a64eefa0b21112f89f58379da128ac177f20e40"
   integrity sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==
 
-node@^19.2.0:
-  version "19.2.0"
-  resolved "https://registry.yarnpkg.com/node/-/node-19.2.0.tgz#f377e046002065fd1a9a23dd7bffc8026be77847"
-  integrity sha512-ETicZqrcApHCufk8L7HCO6eUe6HmZFN3YmAklYdETyp8Gi10UZGFvVJ/AvihE9i5CueXsebEP/7DgFKjohHXHw==
+node@^19.3.0:
+  version "19.3.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-19.3.0.tgz#4be87f322a52eaf3b24d921749f370f8286be8ea"
+  integrity sha512-y45/LdrEKlw2/RbeJjI7HccRX35tar2A8sfYvAJUfb86hTZilYxa11yyzVVoEolRHPwzB1mN3Jcw3ow75Diklw==
   dependencies:
     node-bin-setup "^1.0.0"
 
