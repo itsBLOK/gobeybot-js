@@ -54,18 +54,10 @@ module.exports = {
     ENABLED: true,
     IDLE_TIME: 120, // Time in seconds before the bot disconnects from an idle voice channel
     MAX_SEARCH_RESULTS: 6,
-    DEFAULT_SOURCE: "SC", // YT or YTM or SC
+    DEFAULT_SOURCE: "YT", // YT or YTM or SC
     // Add any number of lavalink nodes here
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
     LAVALINK_NODES: [
-      {
-        host: "lavalink.oops.wtf",
-        port: 2000,
-        password: "www.freelavalink.ga",
-        id: "Lavalink.GA",
-        retryDelay: 5000,
-        secure: false,
-      },
       {
         host: "5.161.69.81",
         port: 25016,
@@ -123,6 +115,9 @@ module.exports = {
       TWITTER: "#1DA1F2",
       INSTAGRAM: "#E1306C",
       TIKTOK: "#00F2EA",
+    },
+    DEFAULT_MSG: {
+
     }
   },
 

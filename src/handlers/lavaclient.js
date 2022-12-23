@@ -67,12 +67,14 @@ module.exports = (client) => {
     embed.setFields(fields);
     queue.data.channel.safeSend({ embeds: [embed] });
   });
-
+  
   lavaclient.on("nodeQueueFinish", async (_node, queue) => {
     const channel = client.channels.cache.get(queue.player.channelId);
-    channel.safeSend("Queue has ended.");
-    queue.player.disconnect();
-    await client.musicManager.destroyPlayer(queue.player.guildId);
+    setTimeout(async () => {
+      channel.safeSend("Queue has ended.");
+      queue.player.disconnect();
+      await client.musicManager.destroyPlayer(queue.player.guildId);
+    }, 120000);
   });
 
   return lavaclient;
