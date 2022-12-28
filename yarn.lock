@@ -1382,6 +1382,15 @@ discord-api-types@^0.37.20, discord-api-types@^0.37.23:
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.37.24.tgz#f3ee0ad6b2b70925b5225f9beac6e24bc4de6e46"
   integrity sha512-1+Fb4huJCihdbkJLcq2p7nBmtlmAryNwjefT8wwJnL8c7bc7WA87Oaa5mbLe96QvZyfwnwRCDX40H0HhcVV50g==
 
+discord-gamecord@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/discord-gamecord/-/discord-gamecord-4.1.0.tgz#f41e8f0245c786a00d6edd883b61e7a9e20d9a8c"
+  integrity sha512-aPnPZ3nUYl2KaPRQznVml4NTxzv9sfJ8LMt92cj3lozVkfDCY4UANpxFcDvgjsFAJ35kKAmnYJQRrRJ8Cz2y8A==
+  dependencies:
+    discord.js "^14.6.0"
+    html-entities "^2.3.3"
+    node-fetch "^2.6.7"
+
 discord-giveaways@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/discord-giveaways/-/discord-giveaways-6.0.1.tgz#09a512cf99fad85fda9f35dc86b0b257e3ba6ba3"
@@ -1413,7 +1422,7 @@ discord.js@^13.1.0:
     node-fetch "^2.6.7"
     ws "^8.9.0"
 
-discord.js@^14.2.0, discord.js@^14.7.1:
+discord.js@^14.2.0, discord.js@^14.6.0, discord.js@^14.7.1:
   version "14.7.1"
   resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.7.1.tgz#26079d0ff4d27daf02480a403c456121f0682bd9"
   integrity sha512-1FECvqJJjjeYcjSm0IGMnPxLqja/pmG1B0W2l3lUY2Gi4KXiyTeQmU1IxWcbXHn2k+ytP587mMWqva2IA87EbA==
@@ -1925,6 +1934,11 @@ help-me@^4.0.1:
   dependencies:
     glob "^8.0.0"
     readable-stream "^3.6.0"
+
+html-entities@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.3.3.tgz#117d7626bece327fc8baace8868fa6f5ef856e46"
+  integrity sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==
 
 http-errors@2.0.0, http-errors@^2.0.0:
   version "2.0.0"
