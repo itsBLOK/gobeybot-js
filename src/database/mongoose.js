@@ -4,7 +4,7 @@ const { log, success, error } = require("../helpers/Logger");
 module.exports = {
   async initializeMongoose() {
     log(`Connecting to MongoDb...`);
-
+    mongoose.set("strictQuery", true);
     try {
       await mongoose.connect(process.env.MONGO_CONNECTION, {
         keepAlive: true,
@@ -26,5 +26,6 @@ module.exports = {
     TranslateLog: require("./schemas/TranslateLog").model,
     User: require("./schemas/User"),
     Suggestions: require("./schemas/Suggestions").model,
+    Notifications: require("./schemas/Notify").model,
   },
 };
