@@ -1,5 +1,10 @@
 const mongoose =require("mongoose");
 
+const reqString = {
+    type: String,
+    required: true,
+  };
+
 const Schema = new mongoose.Schema({
     guild_id: reqString,
     twitch: {
@@ -19,5 +24,5 @@ const Schema = new mongoose.Schema({
     }
 })
 
-const Model = mongoose.model("giveaways", Schema);
+const Model = mongoose.model("notify", Schema);
 module.exports = Model;
