@@ -13,43 +13,40 @@ module.exports = {
     category: "MUSIC",
     botPermissions: ["EmbedLinks"],
     command: {
-      enabled: true,
-      minArgsCount: 1,
-      usage: "<Song Title - singer>",
+        enabled: true,
+        minArgsCount: 1,
+        usage: "<Song Title - singer>",
     },
     slashCommand: {
-      enabled: true,
-      options: [
-        {
-          name: "query",
-          type: ApplicationCommandOptionType.String,
-          description: "find lyric of the song",
-          required: true,
-        },
-      ],
+        enabled: true,
+        options: [
+            {
+                name: "query",
+                type: ApplicationCommandOptionType.String,
+                description: "find lyric of the song",
+                required: true,
+            },
+        ],
     },
 
     async messageRun(message, args) {
-        const choise = args.join(" ");
-        if (!choise) {
-          return message.safeReply("Invalid Lyric selected.");
+        const choice = args.join(" ");
+        if(!choice) {
+            return message.safeReply("Invalid Lyric selected.");
         }
-        const response = await getLyric(message.author, choise);
+        const response = await getLyric(message.author, choice);
         return message.safeReply(response);
-      },
+    },
 
-      async messageRun(message, args) {
-        const choise = args.join(" ");
-        if (!choise) {
-          return message.safeReply("Invalid Lyric selected.");
-        }
-        const response = await getLyric(message.author, choise);
-        return message.safeReply(response);
-      },
+    async interactionRun(interaction) {
+        const choice = interaction.options.getString("query");
+        const response = await getLyric(interaction.user, choice);
+        await interaction.followUp(response)
+    },
 };
 
-async function getLyric(user, choise) {
-    const lyric = await getJson(`${BASE_URL}?title=${choise}`);
+async function getLyric(user, choice) {
+    const lyric = await getJson(`${BASE_URL}?title=${choice}`);
     if(!lyric.success) return MESSAGES.API_ERROR;
 
     const thumbnail = lyric.data?.thumbnail.genius;
@@ -64,6 +61,6 @@ async function getLyric(user, choise) {
       .setThumbnail(thumbnail)
       .setDescription(lyrics)
       .setFooter({ text: `Request By: ${user.tag}` });
-      
-      return { embeds: [embed] };
+
+    return { embeds: [embed] };
 }
