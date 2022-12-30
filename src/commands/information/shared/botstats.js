@@ -20,7 +20,8 @@ module.exports = (client) => {
       {
         name: "Verison",
         value: stripIndent`
-        v1.10.5-beta
+        ❒  **Gobey:** v1.10.5-beta
+        ❒  **Gobey API:** v1.0.0 
         ❒  **Go:** v1.19.4
         ❒  **discordgo:** v1.2.10(modified)
         `,

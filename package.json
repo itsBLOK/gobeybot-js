@@ -1,6 +1,6 @@
 {
   "name": "gobeybot-js",
-  "version": "2.1.0",
+  "version": "1.10.5-beta",
   "description": "Gobey Bot JS",
   "main": "bot.js",
   "author": "BLOK",
@@ -10,7 +10,8 @@
   },
   "scripts": {
     "dev": "nodemon .",
-    "start": "node ."
+    "start": "node .",
+    "format": "prettier --write src"
   },
   "repository": {
     "type": "git",
