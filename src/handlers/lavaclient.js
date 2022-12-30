@@ -49,6 +49,12 @@ module.exports = (client) => {
       .setDescription(`[${song.title}](${song.uri})`)
       .setFooter({ text: `Requested By: ${song.requester}` });
 
+    if (song.sourceName === "youtube") {
+      const identifier = song.identifier;
+      const thumbnail = `https://img.youtube.com/vi/${identifier}/hqdefault.jpg`;
+      embed.setThumbnail(thumbnail);
+    }
+
     fields.push({
       name: "Song Duration",
       value: "`" + prettyMs(song.length, { colonNotation: true }) + "`",
@@ -59,7 +65,7 @@ module.exports = (client) => {
     if (queue.tracks.length > 0) {
       fields.push({
         name: "Position in Queue",
-        value: (queue.tracks.findIndex((t) => t.track === song.track) + 1).toString(),
+        value: (queue.tracks.length + 1).toString(),
         inline: true,
       });
     }
@@ -67,7 +73,7 @@ module.exports = (client) => {
     embed.setFields(fields);
     queue.data.channel.safeSend({ embeds: [embed] });
   });
-  
+
   lavaclient.on("nodeQueueFinish", async (_node, queue) => {
     const channel = client.channels.cache.get(queue.player.channelId);
     setTimeout(async () => {

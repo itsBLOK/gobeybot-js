@@ -57,6 +57,17 @@ module.exports = {
     );
     let buttonsRow = new ActionRowBuilder().addComponents(components);
 
+    const guilds = client.guilds.cache.size;
+    const channels = client.channels.cache.size;
+    const users = client.guilds.cache.reduce((size, g) => size + g.memberCount, 0);
+
+    let desc = "";
+    desc += `❒ Total guilds: ${guilds}\n`;
+    desc += `❒ Total users: ${users}\n`;
+    desc += `❒ Total channels: ${channels}\n`;
+    desc += `❒ Websocket Ping: ${client.ws.ping} ms\n`;
+    desc += "\n";
+
     // Embed Builder
     const buildEmbed = () => {
       const start = (currentPage - 1) * maxPerPage;
@@ -65,6 +76,7 @@ module.exports = {
       const embed = new EmbedBuilder()
         .setColor(client.config.EMBED_COLORS.BOT_EMBED)
         .setAuthor({ name: "List of servers" })
+        .setDescription(desc)
         .setFooter({ text: `${match ? "Matched" : "Total"} Servers: ${total} • Page ${currentPage} of ${totalPages}` });
 
       const fields = [];
