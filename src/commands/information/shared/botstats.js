@@ -23,7 +23,7 @@ module.exports = (client) => {
         ❒  **Gobey:** v1.10.5-beta
         ❒  **Gobey API:** v1.0.0 
         ❒  **Go:** v1.19.4
-        ❒  **discordgo:** v1.2.10(modified)
+        ❒  **discordgo:** v0.26.1(modified)
         `,
         inline: true,
       },
