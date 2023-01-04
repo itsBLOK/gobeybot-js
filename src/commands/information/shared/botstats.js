@@ -38,7 +38,7 @@ module.exports = (client) => {
       },
       {
         name: "Licenses",
-        value: "Gobey ❤️ Open Source\n https://oss.gobeybot.xyz/licenses",
+        value: "We ❤️ Open Source\n https://oss.gobeybot.xyz/licenses",
         inline: false,
       },
       {
