@@ -59,18 +59,18 @@ module.exports = {
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
     LAVALINK_NODES: [
       {
-        host: "5.161.69.81",
-        port: 25016,
-        password: "Jm506914522",
+        host: "lava1.horizxon.studio",
+        port: 80,
+        password: "horizxon.studio",
         id: "Lavalink 1",
         retryDelay: 5000,
         secure: false,
       },
       {
-        host: "5.161.69.81",
-        port: 25017,
-        password: "Jm506914522",
-        id: "Lavalink 2",
+        host: "lava3.horizxon.studio",
+        port: 80,
+        password: "horizxon.studio",
+        id: "Lavalink 1",
         retryDelay: 5000,
         secure: false,
       },
