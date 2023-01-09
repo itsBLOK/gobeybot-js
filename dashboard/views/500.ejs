@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <%- include('includes/head') %>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+    <title>Oops! Something went wrong. - Gobey Bot</title>
+    <link rel="icon" type="image/svg" href="/dist/img/gobey.svg" />  
+    <!-- CSS JS Fonts Icons-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/dist/css/custom.css" />
+    <link rel="stylesheet" href="/dist/css/AdminLTE.min.css" />
+    <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"
+    />
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/dist/js/adminlte.min.js"></script>
+  </head>
+  
 
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-      <!-- The header is the topbar -->
-      <%- include('includes/header') %>
-
-      <!-- The sidebar includes the menu -->
-      <%- include('includes/sidebar') %>
-
-      <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>500 Error Page</h1>
         </section>
-
-        <!-- Main content -->
         <section class="content">
           <div class="error-page">
             <h2 class="headline text-red">500</h2>
@@ -38,19 +50,11 @@
                     <button type="submit" class="btn btn-danger btn-flat"><i class="fa fa-search"></i></button>
                   </div>
                 </div>
-                <!-- /.input-group -->
               </form>
             </div>
-            <!-- /.error-content -->
           </div>
-          <!-- /.error-page -->
         </section>
-        <!-- /.content -->
       </div>
-      <!-- /.content-wrapper -->
-
-      <%- include('includes/footer') -%>
     </div>
-    <!-- ./wrapper -->
   </body>
 </html>
