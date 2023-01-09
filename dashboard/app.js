@@ -37,7 +37,7 @@ module.exports.launch = async (client) => {
       session({
         secret: process.env.SESSION_PASSWORD,
         cookie: { maxAge: 336 * 60 * 60 * 1000 },
-        name: "djs_connection_cookie",
+        name: "gobey_connection_cookie",
         resave: true,
         saveUninitialized: false,
         store: MongoStore.create({
