@@ -40,7 +40,7 @@
     "lavaclient": "^4.1.1",
     "module-alias": "^2.2.2",
     "moment": "^2.29.4",
-    "mongoose": "^6.8.2",
+    "mongoose": "^6.8.3",
     "nekos.life": "^3.0.0",
     "node-fetch": "^2.6.7",
     "os": "^0.1.2",
@@ -57,7 +57,7 @@
   "optionalDependencies": {
     "bufferutil": "^4.0.7",
     "erlpack": "^0.1.4",
-    "utf-8-validate": "^5.0.10",
+    "utf-8-validate": "^6.0.0",
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
@@ -65,7 +65,7 @@
     "eslint-plugin-jsdoc": "^39.6.4",
     "node": "^19.3.0",
     "nodemon": "^2.0.20",
-    "prettier": "2.8.1"
+    "prettier": "2.8.2"
   },
   "_moduleAliases": {
     "@root": ".",

@@ -2100,10 +2100,10 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
-kareem@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.5.0.tgz#9d2b2272609b0d5b981757fa5794d7ad0ac041b2"
-  integrity sha512-rVBUGGwvqg130iwYu8k7lutHuDBFj1yGRdnlE44wEhxAmFBad1zcL66PdWC1raw3tIObY6XWhtv3VL04xQb/cg==
+kareem@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.5.1.tgz#7b8203e11819a8e77a34b3517d3ead206764d15d"
+  integrity sha512-7jFxRVm+jD+rkq3kY0iZDJfsO2/t4BBPeEb2qKn2lR/9KhuksYk5hxzfRYWMPV8P/x2d0kHD306YyWLzjjH+uA==
 
 kruptein@^3.0.0:
   version "3.0.5"
@@ -2255,13 +2255,13 @@ mongodb@4.12.1:
     "@aws-sdk/credential-providers" "^3.186.0"
     saslprep "^1.0.3"
 
-mongoose@^6.8.2:
-  version "6.8.2"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-6.8.2.tgz#5b11a3ca0f6955e65f8f1e2255dad213e122b4ea"
-  integrity sha512-cIato5N2w/QuJkkh0w4nyf7ty7DqmmP/W8/6PFSM0DrzbxIMlr6VN15LBIceTSJIxbznNl2Mlbh9Rm4sokMw+A==
+mongoose@^6.8.3:
+  version "6.8.3"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-6.8.3.tgz#6580b9846a9defbb0f0cff317443d4f87e9cce8e"
+  integrity sha512-qrVWefJK+wFNBH0ALV+oiyJ+FN42O/BqvHFmlFJJ2LKuNmQEOE0JV8FCxnZqtanwbHs4i+k/SkjhtC+C01haaw==
   dependencies:
     bson "^4.7.0"
-    kareem "2.5.0"
+    kareem "2.5.1"
     mongodb "4.12.1"
     mpath "0.9.0"
     mquery "4.0.3"
@@ -2529,10 +2529,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier@2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.1.tgz#4e1fd11c34e2421bc1da9aea9bd8127cd0a35efc"
-  integrity sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==
+prettier@2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.2.tgz#c4ea1b5b454d7c4b59966db2e06ed7eec5dfd160"
+  integrity sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==
 
 pretty-ms@^7.0.1:
   version "7.0.1"
@@ -3098,10 +3098,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-utf-8-validate@^5.0.10:
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/utf-8-validate/-/utf-8-validate-5.0.10.tgz#d7d10ea39318171ca982718b6b96a8d2442571a2"
-  integrity sha512-Z6czzLq4u8fPOyx7TU6X3dvUZVvoJmxSQ+IcrlmagKhilxlhZgxPK6C5Jqbkw1IDUmFTM+cz9QDnnLTwDz/2gQ==
+utf-8-validate@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/utf-8-validate/-/utf-8-validate-6.0.0.tgz#91a169e91ee5441a2bab5f059f4a39cdd402caf2"
+  integrity sha512-OCJuwxQsnG51swYmNloViggxNOFO/leOZpnb/vVeoastJbrzrZZU7lGsYlUcdkCl9nsBu2nkKLjpljb3Ckvb/Q==
   dependencies:
     node-gyp-build "^4.3.0"
 
