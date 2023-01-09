@@ -65,7 +65,7 @@
     "eslint-plugin-jsdoc": "^39.6.4",
     "node": "^19.3.0",
     "nodemon": "^2.0.20",
-    "prettier": "2.8.1"
+    "prettier": "2.8.2"
   },
   "_moduleAliases": {
     "@root": ".",
